@@ -5,7 +5,7 @@
 
 # ChallengeMe
 
-**Version 1.0 approved**
+**Version 1.0**
 
 **Prepared by**  **Benjamin Bordelon, Blake Roussel, Mahdi Judeh**
 
