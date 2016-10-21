@@ -21,15 +21,15 @@
 
 **1.        Introduction       **
 
-.1        Purpose
+1.1        Purpose
 
-.2        Document Conventions
+1.2        Document Conventions
 
-.3        Intended Audience and Reading Suggestions
+1.3        Intended Audience and Reading Suggestions
 
-.4        Product Scope
+1.4        Product Scope
 
-.5        References
+1.5        References
 
 **2.        Overall Description       **
 
