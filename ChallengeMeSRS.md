@@ -178,18 +178,18 @@ _The system assumes that the user has a stable internet connection and has basic
  **3. External Interface Requirements**
    **3.1 User Interfaces**
 
-_The user interface will be a web page accessible from any web browser. Users will be presented a webpage with a multiple buttons and tabs on a single page, allowing the user to navigate the site. The user interface shall be implemented in HTML, CSS, BootStrap, and JS._
+_The user interface will be a web page accessible from any web browser. Users will be presented a webpage with a multiple buttons and tabs on a single page, allowing the user to navigate the site. The user will have the ability to click on challenges that are displayed on the main page. The main web page will also have tabs to allow you to sort challenges by different parameters. There will be button to allow the user to vote on the challenges and videos, as well as buttons to allow the user to login and logout. The user interface shall be implemented in HTML, CSS, BootStrap, and JS._
 
 
    **3.2 Hardware Interfaces**
 
 
-_The user interface requires the user to have access to a device with the ability to connect to the internet. The user&#39;s device must also have a way to display the web page,  typically by a screen._
+_The user interface requires the user to have access to a device with the ability to connect to the internet. The user&#39;s device must also have a way to display the web page, typically by a screen._
 
 
    **3.3 Software Interfaces**
 
-_This system will operate with an SQL database. The database will send to the system the challenges and links to the videos currently trending, as well as the links to the top videos of all time, and links to newly added videos. If the user is requesting to login the system will pull from the database the associated password with the user&#39;s account. The system will send the submitted challenges and videos to the database. The system will recieve design aspects from the Bootstrap framework. The system will retrieve videos from Youtube._
+_This system will operate with an SQL database. The database will send the system challenges and links to the videos currently trending, as well as the links to the top videos of all time, and links to newly added videos. If the user is requesting to login the system will pull from the database the associated password with the user&#39;s account. The system will send the submitted challenges and videos to the database. The system will recieve design aspects from the Bootstrap framework. The system will retrieve videos from Youtube._
 
 
    **3.4 Communications Interfaces**
