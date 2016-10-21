@@ -1,23 +1,23 @@
 # **Software Requirements Specification**
 
 #
-## for
+# for
 
 # ChallengeMe
 
-**Version 1.0**
+#**Version 1.0**
 
-**Prepared by**  **Benjamin Bordelon, Blake Roussel, Mahdi Judeh**
+#**Prepared by**  **Benjamin Bordelon, Blake Roussel, Mahdi Judeh**
 
-**LSU**
+#**LSU**
 
-**October 21, 2016**
+#**October 21, 2016**
+
+#**Table of Contents**
 
 **Table of Contents**
 
-**Table of Contents       **
-
-**Revision History       **
+**Revision History**
 
 **1. Introduction**
 
