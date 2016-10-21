@@ -211,11 +211,11 @@ _The system shall use HTTP for communication over the internet._
 
   **1. Updating Database**
 
-_Both the data entered by the user for their account and the integer number for upvotes/downvotes must be stored in the database and usable within a reasonable amount of time. Ideally the system should update the database in under 3 seconds after data submission._
+Both the data entered by the user for their account and the integer number for upvotes/downvotes must be stored in the database and usable within a reasonable amount of time. Ideally the system should update the database in under 10 seconds after data submission.
 
   **2.  Calculating and Allotting Point Worth**
 
-_The system must be able to calculate the worth of a challenge through a specified algorithm and allot the appropriate points to users who successfully complete a challenge, all within a reasonable amount of time. The user should be able to view their updated current point total(including the  specified challenge&#39;s calculated point worth) within 5 seconds of being awarded the points._
+The system must be able to calculate the worth of a challenge through a specified algorithm and allot the appropriate points to users who successfully complete a challenge, all within a reasonable amount of time. The user should be able to view their updated current point total(including the  specified challenge’s calculated point worth) within 10 seconds of being awarded the points.
 
 
  **5.2 Safety Requirements**
@@ -232,13 +232,15 @@ In order to ensure that all users of the program use good judgement to prevent i
 
 If a user submits a challenge involving an individual&#39;s property or public property, damage or loss of said property could be a result. Therefore, our program will present an agreement to the user upon creating an account regarding possible loss, damage, or harm to an individual or property that could result from the use of our program. This will shift liability to the user upon agreement.
 
-
+  **4. DMCA(Digital Millennium Copyright Act) Violation**
+  
+  If a dishonest user desires to gain user points in an unfavorable way, it is possible that video links(other than ones owned by the user) could be submitted plagiaristically. Guidelines for participating in the product community  will be presented to the user upon account creation to shift liability of plagiarism to the user.
 
  **5.3 Security Requirements**
 
   **1. Account Security**
 
-Due to sensitive information being contained within the user database, it must be ensured that each user is the only user able to access his own account. The user login feature will ensure a user&#39;s information remains private by requiring validation of a user&#39;s username and password. In order to prevent access from unwanted users(possibly on a public computer), a forced log-out will be implemented to log the user out as soon as the web page is closed.
+Due to sensitive information being contained within the user database, it must be ensured that each user is the only user able to access his own account. The user login feature will ensure a user’s information remains private by requiring validation of a user’s username and password. In order to prevent access from unwanted users(possibly on a public computer).
 
 
 
@@ -246,11 +248,11 @@ Due to sensitive information being contained within the user database, it must b
 
   **1. Usability**
 
-Product usability is essential to the success of our product. Navigating the GUI(Graphical User Interface) of the product should be easy, simple, and intuitive. We will implement a home page(with tabs for newest, hot, and most popular challenge) and a user account page for each user. These pages should each be able to be accessed in 1 click, assuming the user is already logged in to his account. This requires &quot;Home&quot; and &quot;My Account&quot; buttons to be available to the user from any location on the website that redirects the user to the appropriate page.
+Product usability is essential to the success of our product. Navigating the UI(User Interface) of the product should be easy, simple, and intuitive. We will implement a home page(with tabs for newest, hot, and most popular challenge) and a user account page for each user. These pages should each be able to be accessed in 1 click, assuming the user is already logged in to his account. This requires “Home” and “My Account” buttons to be available to the user from any location on the website that redirects the user to the appropriate page.
 
   **2. Availability**
 
-    The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since updating the database is the only scenario where the server would experience downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or less.
+    The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since altering structure of the database is the only scenario where the server would experience scheduled downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or immediately required under the condition that a bug arises.
 
   **3. Robustness**
 
@@ -258,7 +260,7 @@ In accordance with the 18+ age policy implemented for the product, the user must
 
   ** 4. Interoperability**
 
-The product utilizes an SQL database to store user information, and transfer this information in real time to a website coded in HTML containing the GUI. Therefore it is essential that these two major software components are able to cooperate in a way that minimizes user inconvenience. The communication between the two components must be efficient and effortless for the user. Updating user/vote data should be near instant(under 3 seconds).
+The product utilizes an SQL database to store user information, and transfers this information in real time to a website. Therefore it is essential that these two major software components are able to cooperate in a way that minimizes user inconvenience. Updating user/vote/challenge data should be done quickly(in under 10 seconds).
 
 
  **5.5 Business Rules**
