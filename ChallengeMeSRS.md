@@ -233,7 +233,7 @@ _&lt;Don&#39;t really say &quot;System Feature 1.&quot; State the feature name i
 
 _&lt;Provide a short description of the feature and indicate whether it is of High, Medium, or Low priority. You could also include specific priority component ratings, such as benefit, penalty, cost, and risk (each rated on a relative scale from a low of 1 to a high of 9).&gt;_
 
-                An interface that allows the user to log into an already created account which unlocks the voting features of the website. Being logged in is not a requirement of the site to function but is required to have any sway on the community of the site. Priority - medium
+   An interface that allows the user to log into an already created account which unlocks the voting features of the website. Being logged in is not a requirement of the site to function but is required to have any sway on the community of the site. Priority - medium
 
 4.1.2        Stimulus/Response Sequences
 
@@ -309,7 +309,7 @@ _&lt;Specify any requirements regarding security or privacy issues surrounding u
 
    ** 2. Availability**
 
-        The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since updating the database is the only scenario where the server would experience downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or less.
+    The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since updating the database is the only scenario where the server would experience downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or less.
 
       **3. Robustness**
 
