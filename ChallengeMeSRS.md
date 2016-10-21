@@ -95,7 +95,8 @@
 
 
 **1. Introduction**
- **1.1 Purpose**
+
+**1.1 Purpose**
 
 _The product is a web based application that allows users to create and view different challenges created by other users. It would also allow the users to submit the videos of them attempting the challenges._
 
@@ -120,6 +121,7 @@ _Challenge Me is a website that allows users to vote on, participate in, and sub
 
 
 **2. Overall Description**
+
  **2.1 Product Perspective**
 
 _The software that is being developed is a web-based, video sharing, platform that allows users to submit and respond to challenges that are communally created. The website is the first of its kind because no other site focuses solely on challenges. The website relies on a web host and domain to host the site and a server to hold the database that stores information such as usernames, password, as well as other user data. The software combines elements of both a social media application and a game application that relies on users to function properly._
@@ -177,6 +179,7 @@ _The system assumes that the user has a stable internet connection and has basic
 
 
  **3. External Interface Requirements**
+ 
    **3.1 User Interfaces**
 
 _The user interface will be a web page accessible from any web browser. Users will be presented a webpage with a multiple buttons and tabs on a single page, allowing the user to navigate the site. The user will have the ability to click on challenges that are displayed on the main page. The main web page will also have tabs to allow you to sort challenges by different parameters. There will be button to allow the user to vote on the challenges and videos, as well as buttons to allow the user to login and logout. The user interface shall be implemented in HTML, CSS, BootStrap, and JS._
@@ -203,6 +206,7 @@ _The system shall use HTTP for communication over the internet._
 
    
 **5. Other Nonfunctional Requirements**
+
  **5.1 Performance Requirements**
 
   **1. Updating Database**
