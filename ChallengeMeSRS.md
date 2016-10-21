@@ -93,14 +93,14 @@
 
 
 
-1. **1.**** Introduction**
-   **1.1**** Purpose**
+**1.** ** Introduction**
+    **1.1** ** Purpose**
 
 _&lt;Identify the product whose software requirements are sp __e__ cified in this document, including the revision or release number. Describe the scope of the product that is covered by this SRS, particularly if this SRS describes only part of the system or a single subsystem.&gt;_
 
 _The product is a web based application that allows users to create and view different challenges created by other users. It would also allow the users to submit the videos of them attempting the challenges._
 
-   **1.2** ** Document Conventions**
+    **1.2** ** Document Conventions**
 
 _&lt;Describe any standards or typographical conventions that were followed when writing this SRS, such as fonts or highlighting that have special significance. For example, state whether priorities  for higher-level requirements are assumed to be inherited by detailed requirements, or whether every requirement statement is to have its own priority.&gt;_
 
