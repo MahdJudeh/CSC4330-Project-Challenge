@@ -102,18 +102,18 @@ _The product is a web based application that allows users to create and view dif
 
 _This document will be following the default typographical conventions of the_ _IEEE Std 830-1998._
 
-_Italicized red will be used to address our documentation._
+
 
 
    **1.3 Intended Audience and Reading Suggestions**
 
-_The intended audience is anyone above the age of 18 that wants to do random challenges for self satisfaction or to show their friends. The rest of the SRS contains the overall description, external interface requirements, system features, and other nonfunctional requirements and is organized based on the table of contents, in numerical order._
+_The intended audience is anyone above the age of 18 that wants to do challenges and compete against other users. The audience is also consisted of users who would like the see challenges in a singular location. The rest of the SRS document contains the overall description, external interface requirements, system features, other nonfunctional requirements and is organized based on the table of contents, in numerical order._
 
 
    **1.4 Product Scope**
 
 
-_Challenge Me is a web-based service that allows users to interact and have fun with random challenges. Challenge Me aims to be a website that people would frequently check whenever they&#39;re bored or want to do something with their friends._
+_Challenge Me is a website that allows users to vote on, participate in, and submit challenges. Challenge Me aims to be a website that provides users with a location to show off their skills and talents to thiers friends and people around the world. The website will frequently update with user submitted challenges and developer submitted challenges in order to constantly supply users with challenges to watch and participate in._
 
   **1.5 References**
 
@@ -121,7 +121,7 @@ _Challenge Me is a web-based service that allows users to interact and have fun 
 **2. Overall Description**
    **2.1 Product Perspective**
 
-_The software that is being developed is a web-based social media game that allows users to submit and respond to challenges that are communally created. The website is a standalone entity and is the first of its kind. The website relies on a web host and domain to host the site and a server to hold the database that stores information such as usernames, password, as well as other user data. The software combines elements of both a social media application and a game application_
+_The software that is being developed is a web-based, video sharing, platform that allows users to submit and respond to challenges that are communally created. The website is the first of its kind because no other site focuses solely on challenges. The website relies on a web host and domain to host the site and a server to hold the database that stores information such as usernames, password, as well as other user data. The software combines elements of both a social media application and a game application that relies on users to function properly._
 
 
    **2.2 Product Functions**
@@ -141,41 +141,44 @@ _The software that is being developed is a web-based social media game that allo
 ·         _System must track if a submission video is worthy of challenge description by keeping track of a satisfaction value as voted by users._
 
 ·        _System should be able to play submission videos and prompt the user to continue to the next submission._
+·        _System should determine if the user has an account and add restrictions accordingly._
+
+
 
 
 
 
    **2.3 User Classes and Characteristics**
 
-_The Challenge Me site only has two basic user classes, a user with an account and a user without an account. A user with an account has access to all of the features the site has to offer such as uploading, voting, and responding. On the other hand a user without an account can access and read challenges as well as view submitted responses, but cannot vote on any challenges or submit anything on the site. ._
+_The Challenge Me site only has two basic user classes, a user with an account and a user without an account. A user with an account has access to all of the features the site has to offer such as uploading, voting, and responding. A user with an account is the primary user that the sysytem is developed around.. On the other hand a user without an account can access and read challenges as well as view submitted responses, but cannot vote on any challenges or submit anything on the site.  ._
 
 
 
    **2.4 Operating Environment**
 
-_System can function using any web browser using a windows, mac, or linux machine._
+_System can function using any web browser using a windows, mac, or linux machine. This make the system in development accessable to a large number of people. This also means that users do not need to have outstanding machines to properly use the system to it fullest. _
 
 
 
    **2.5 Design and Implementation Constraints**
 
-
+_The most restrictive constraint that affects the implementation of the system is time. Because the time to complete to system is so limited, is system will not be as detailed as desired. Another constraint on the design of the system is language requirements. Majority of the development team is not fluent in SQL, Javascript, bootstrap, and HTML._
 
    **2.6 User Documentation**
 
-_The goal of the system is to use familiar and intuitive design and layout. It follow basic design layout  _
+_The goal of the system is to use familiar and intuitive design and layout. It follows basic design layout that you may find on any social media website. The website also features all out its features on one page which eleminates the need to constantly navigate to different pages, and makes the site more consise. _
 
 
 
    **2.7 Assumptions and Dependencies**
 
-_The system assumes that the user has a stable internet connection and has basic knowledge on internet useage. The system also relies on the input of the users to function as described. If the users do not give their input the site may not display the best challenges or submission videos properly. In addition the system assumes the user base will be honest. If the users aren&#39;t honest it may result in an inflation in the point system. For example, if users decide to accept another user&#39;s video submission that doesn&#39;t meet challenge requirements then it results in users getting undeserved points.  _
+_The system assumes that the user has a stable internet connection and has basic knowledge on internet useage. The system also relies on the input of the users to function as described. If the users do not give their input the site may not display the most appropiate challenges or submission videos properly. In addition the system assumes the user base will be honest in regards to upvoting and downvoting, but will have a system in place to combat dishonest users. If the users aren&#39;t honest it may result in an inflation in the point system. For example, if users decide to accept another user&#39;s video submission that doesn&#39;t meet challenge requirements then it results in users getting undeserved points.  _
 
 
  **3. External Interface Requirements**
    **3.1 User Interfaces**
 
-_The user interface will be a web page accessible from any browser. Users will be presented a webpage with a multiple buttons and tabs allowing the user to navigate the site.The user interface shall be implemented in HTML, CSS, BootStrap, and JS._
+_The user interface will be a web page accessible from any web browser. Users will be presented a webpage with a multiple buttons and tabs on a single page, allowing the user to navigate the site. The user interface shall be implemented in HTML, CSS, BootStrap, and JS._
 
 
    **3.2 Hardware Interfaces**
