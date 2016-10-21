@@ -56,167 +56,7 @@
 
 **4. System Features**
 
-**FR-1**               **Prompt Next Video**
 
-| Summary | Upon video ending, the product should display a prompt for the user to move to the next video in the challenge&#39;s video reply list. |
-| --- | --- |
-| Rational | The prompt will allow the convenient transition from current video to next video at the pace the user desires. |
-| Requirements | The user can click a button &quot;next&quot;, and in response, the system will show the next video in the list without playing it. The user can then click play. |
-
-
-
-
-
-
-
-
-
-
-
-**FR-2                 Voting on Challenge**
-
-| Summary | The system should allow the user to upvote and downvote challenges and store this data in the location of the specified challenge. Upvotes determine popularity of a challenge, and downvotes are used to purge the challenge list of unpopular or undesirable challenges. Upvoting increments the point value by one, and downvoting decrements the point value by one.   |
-| --- | --- |
-| Rational | System capability of determining popular challenges is essential to providing a positive user experience. Purging the list of unpopular videos will ensure that better content is being displayed to the user. |
-| Requirements | The user can click upvote on any challenge and the system should increment the upvote number on the challenge by one and store that data as type int. This data will be run through two algorithms to determine the ranking of the specified challenge in both the system&#39;s trending and popular challenge lists. The user can click downvote, after which the system will increment the downvote number for the specified challenge. After reaching the arbitrary value of downvotes(10 downvotes), the challenge will be purged from the list and as a result deleted from the system. |
-
-**FR-3**             **Display Video**
-
-| Summary | The system will provide a feature to display videos via use of YouTube&#39;s embedded player. |
-| --- | --- |
-| Rational | The feature will be used by users to watch videos of other users attempting challenges. The main feature of the product is viewing video submissions for challenges, therefore it is essential that these videos behave as expected and without errors. |
-| Requirements | The system should display a video from the challenge they were submitted to. The system will provide 2 filters to organize and view a challenge&#39;s video replies(most popular, newest). The system will default to showing the user the newest video submissions for the specified challenge. |
-
-
-
-**FR-4                 Get Top Challenge List**
-
-| Summary | The system should provide a means to display challenges in the order of most liked challenge to least liked challenge. |
-| --- | --- |
-| Rational | This feature will be used for viewing challenges in a certain order. It is desirable for users to view challenges based on which challenges are most popular.. |
-| Requirements | The system should find and retrieve the challenges that are the most popular(most upvoted, second most upvoted, and so on) and put them in a list for viewing.With one click a user may navigate to any of the other tabs(hottest and newest). |
-
-
-
-**FR-5                 Get Newest Challenge List**
-
-| Summary  | The system should provide a means to display challenges in order of newest to oldest list form. |
-| --- | --- |
-| Rational  | This is vital to the system because it allows users to access the list of new challenges and vote on them. Going to the newest challenge tab will promote both the growth of challenges that have recently been submitted and the novelty of original and creative challenge submission. |
-| Requirements | The system should display a list of challenges from newest to oldest. System would require a timestamp on each challenge to keep of when the challenge was submitted. With one click a user may navigate to any of the other tabs(hottest and top). |
-
-**FR-6            Get Hot/Trending Challenge List**
-
-| Summary | The system should allow the user to view challenges according to their &quot;trendiness.&quot; Trendiness is the relation between a challenge&#39;s popularity and the recentness of its submission. |
-| --- | --- |
-| Rational | Ensuring that the user can view challenges according to their recent popularity is vital to creating both a current and refreshing list of popular challenges and giving a positive user experience. |
-| Requirements | The system should default to the hot tab. If not on the tab already, the user can click the &quot;Hot&quot; tab on the main page; in response, the system will show the user the appropriate list. This list ordering is based on using an algorithm that determines a challenge&#39;s popularity using a challenge&#39;s net votes in relation to recentness of submission of the challenge. The user can navigate to other filter tabs(hot, most popular) with one click. |
-
-**FR-7                Calculate Point Worth For Challenges**
-
-| Summary | The system should provide a challenge&#39;s worth(in points) based on the amount of users that have voted upon it as well as the ratio of upvotes to downvotes. |
-| --- | --- |
-| Rational | If a user is determined to have successfully completed a challenge, then that user will be awarded points based on a ratio of users that have voted on the challenge&#39;s worth. |
-| Requirements | The system will have a tracker for the amount of voters that have voted on a challenge compared to the total number of registered users. It will also have a tracker for how many upvotes and downvotes a challenge gets. A ratio will be computed for how many users have voted upon a challenge compared to how many active users on the site. An arbitrary algorithm calculates the point worth of a challenge. |
-
-**FR-8               Determine Video Success/Failure**
-
-| Summary | The system requires a feature through which a user succeeds(and is awarded points) or fails at a challenge based on the video they submit. |
-| --- | --- |
-| Rational | For a user to aquire points from the system, they must have more upvotes than downvotes on their video submission to a challenge. Other users view the video and determine whether or not the submitter succeeds or fails a challenge. |
-| Requirements | This system needs a feature that allows users to vote up or down on a video, as well as a tracker to keep how many upvotes and downvotes a video gets. Video submissions must be stored in the database so the system can access them. |
-
-
-
-
-
-**FR-9                 Entering and Storage of Video Submissions in Database**
-
-| Summary | The system should transfer the user submitted video link from the GUI to the user database. |
-| --- | --- |
-| Rational | Storing a video submission relative to its challenge is essential to the user viewing the desired content. |
-| Requirements | The user can click the &quot;submit&quot; button next to a certain challenge. Upon clicking said button, the system will prompt the user to enter a video link and displays a warning for submitting videos. The user can enter the link to the desired YouTube video to be uploaded in the previously mentioned user prompt. The user can click submit to send the link to be entered in the video database. |
-
-**FR-10  **         **Entering and Storage of Challenges in Database**
-
-| Summary | The system should store challenges and their attributes in the challenge database. |
-| --- | --- |
-| Rational | Storing a challenge in the database is essential to providing the user content to browse as well as listing the challenges according to desired filter. |
-| Requirements | The user can click &quot;Challenge Other Players.&quot; Upon the user click, the system prompts the user to enter challenge title and description. The user can click &quot;Challenge Them!&quot; The system responds by transferring the new challenge data to the challenge database and displaying the challenge on web page. |
-
-**FR-11                 Creation/Store New Users in Database**
-
-| Summary | The user should be able to enter his personal information and submit it to the system. The system should store newly created user account information in the Database. |
-| --- | --- |
-| Rational | Growing the user base of the product is directly related to the success of the system. Therefore it is essential that users be able to create an account and use it immediately. |
-| Requirements | The user will have the option to click on the create new account button. If clicked, the system should prompt the user for a user name, email address, age, and password. The user needs to verify that their chosen username is not taken. The user can then click create to &quot;submit&quot; the information. The system should store all user information in the database. The system will create and set a point value of 0 for the newly created user. Also the system will store the date of account creation |
-
-
-
-**FR-12                 Return Errors For Invalid Inputs**
-
-| Summary | The system should recognize both when a user is under the age of 18 to participate and when invalid characters are used in usernames and challenge titles. Invalid YouTube video links must also be rejected by the system. |
-| --- | --- |
-| Rational | The safety of minors trying to participate in the product community is reliant on the system&#39;s ability to recognize an underage user(assuming user honesty). In order to maintain readability of challenge titles and usernames, the use of special characters[!,@,#,$,%,^,&amp;,\*,(,),etc.] will be largely disallowed: challenge titles will be allowed to use a select few special characters[! , &quot; , ( , ) , . , : , ; and ,]. Descriptions of challenges might need special characters to convey information to the user, so special characters entry will be allowed for challenge descriptions. |
-| Requirements | The user can enter text/video links on various parts of the website. After user submission of data, the system will recognize any underage users or invalid characters in usernames in the account creation scenario as well as invalid characters pertaining to a challenge&#39;s title in the challenge creation scenario. The system can verify if submissions for video links are in fact links to YouTube videos. |
-
-**FR-13                 Login/Logout**
-
-| Summary | The system should provide a login and logout feature for users who have accounts to get access to user restricted features. |
-| --- | --- |
-| Rational | A login system is necessary to allow the user access to his account&#39;s video submissions as well as the points they have gained from the  videos. |
-| Requirements | A database to store all user information is necessary. A verification feature is required to check whether or not a user&#39;s login information is correct and matches his password. If a user is already logged in, instead of a button for logging in a button for logging out should be displayed. |
-
-
-
-**FR-14           Adds Restrictions to Unregistered Users**
-
-| Summary | Users that are not logged into their accounts have restricted access to the website. |
-| --- | --- |
-| Rational | Users that are anonymous should not have the ability to vote or submit videos. |
-| Requirements | The systems should detect that there is no account logged in. If the user clicks on a vote button or tries to submit a video, a pop up with come up and prompts the user to log in. |
-
-**FR-15                 User Can Access Their Account Information**
-
-| Summary | The system should allow users to view the amount of points they achieved as well as the video submissions for challenges they have completed. |
-| --- | --- |
-| Rational | Users should have an account that shows their current lifetime point total in order to gauge their progress. |
-| Requirements | The system should have a database with users&#39; accounts and their information. The system should be displayed as a pop up after the information button is clicked that displays the user&#39;s video submissions, and current lifetime point total. |
-
-**FR-16**             **Prompt Login/Signup**
-
-| Summary | The system should allow users to log in to their accounts or create accounts to gain access to voting and submission and to user account info. The accounts should be unique with individual statistics within them. |
-| --- | --- |
-| Rational | Voting and challenge submission is only available to registered and logged in users. The user should have an account that is accessible to him and only him. |
-| Requirements | The system should prompt the user to log in to their account. If the user doesn&#39;t have an account yet, the system would prompt the user to create one. The user can enter his information regarding age, username, e-mail address, and password. User can click &quot;Create.&quot; Once created, the system will prompt the user to log in again. Once the user logs in, the system should access the database and retrieve all the information related to that account. The user&#39;s account information should be saved once the account is logged out or when the page is closed. |
-
-**FR-17           User Can Report Dangerous/Illegal Challenges/Ideas**
-
-| Summary | The system should allow users to report any challenges or ideas that are physically dangerous to the users, sexually inappropriate, illegal, invoke harm to another human, either physically or emotionally. |
-| --- | --- |
-| Rational | If any challenges or ideas meet the descriptions above, stakeholders could be held liable, so we would like to take care of anything that could potentially harm stakeholders. |
-| Requirements | The system should allow the user to click on a button to report the challenge/idea with a description of the reason why it should be reported. |
-
-**FR-18**           **Moderators Can Remove Challenges/Videos**
-
-| Summary | The system should allow moderators to delete challenge ideas and submitted videos. |
-| --- | --- |
-| Rational | The system will be used to allow moderators to delete videos if they fit the descriptions they were reported for. |
-| Requirements | The system should prompt the moderators to see if they would like to delete the video. The system should find the video in the database and then delete it. |
-
-**FR-19                  Users Can Retract Video Submissions After Point of Submission**
-
-| Summary | The system should allow users to remove videos after they submit it. |
-| --- | --- |
-| Rational | The system will be used to help users delete videos if they accidentally submit a video or regret posting a video. |
-| Requirements | The system should prompt the user to see if they would like to delete their video. The system should find the video in the database and then delete the link to it. |
-
-**FR-20 Users Can Access a User Leaderboard**
-
-| Summary | The system should allow users to view their community rank in relation to other users. |
-| --- | --- |
-| Rational | Allowing users to view their current leaderboard position as well as the positions of the top users is essential to provide incentive for users to complete challenges. |
-| Requirements | The user can click the &quot;Leaderboard&quot; button. The system will redirect the user to the leaderboard page and display the leaderboard list in the UI. The user can click the &quot;Top Players&quot; tab. The system will display the 15 users with the most points in the community. The user can click the &quot;my rank&quot; tab. The system will display the 7 other users directly above the user in rank, the user, and the 7 other users directly below the user in rank. The leaderboard page will default to the &quot;top&quot; tab. |
 
 **5. Other Nonfunctional Requirements**
 
@@ -359,7 +199,157 @@ _The system shall use HTTP for communication over the internet._
 
 **4. System Features**
 
+**FR-1 Prompt Next Video**
 
+| Summary | Upon video ending, the product should display a prompt for the user to move to the next video in the challenge&#39;s video reply list. |
+| --- | --- |
+| Rational | The prompt will allow the convenient transition from current video to next video at the pace the user desires. |
+| Requirements | The user can click a button &quot;next&quot;, and in response, the system will show the next video in the list without playing it. The user can then click play. |
+
+**FR-2 Voting on Challenge**
+
+| Summary | The system should allow the user to upvote and downvote challenges and store this data in the location of the specified challenge. Upvotes determine popularity of a challenge, and downvotes are used to purge the challenge list of unpopular or undesirable challenges. Upvoting increments the point value by one, and downvoting decrements the point value by one.   |
+| --- | --- |
+| Rational | System capability of determining popular challenges is essential to providing a positive user experience. Purging the list of unpopular videos will ensure that better content is being displayed to the user. |
+| Requirements | The user can click upvote on any challenge and the system should increment the upvote number on the challenge by one and store that data as type int. This data will be run through two algorithms to determine the ranking of the specified challenge in both the system&#39;s trending and popular challenge lists. The user can click downvote, after which the system will increment the downvote number for the specified challenge. After reaching the arbitrary value of downvotes(10 downvotes), the challenge will be purged from the list and as a result deleted from the system. |
+
+**FR-3 Display Video**
+
+| Summary | The system will provide a feature to display videos via use of YouTube&#39;s embedded player. |
+| --- | --- |
+| Rational | The feature will be used by users to watch videos of other users attempting challenges. The main feature of the product is viewing video submissions for challenges, therefore it is essential that these videos behave as expected and without errors. |
+| Requirements | The system should display a video from the challenge they were submitted to. The system will provide 2 filters to organize and view a challenge&#39;s video replies(most popular, newest). The system will default to showing the user the newest video submissions for the specified challenge. |
+
+
+
+**FR-4 Get Top Challenge List**
+
+| Summary | The system should provide a means to display challenges in the order of most liked challenge to least liked challenge. |
+| --- | --- |
+| Rational | This feature will be used for viewing challenges in a certain order. It is desirable for users to view challenges based on which challenges are most popular.. |
+| Requirements | The system should find and retrieve the challenges that are the most popular(most upvoted, second most upvoted, and so on) and put them in a list for viewing.With one click a user may navigate to any of the other tabs(hottest and newest). |
+
+
+
+**FR-5 Get Newest Challenge List**
+
+| Summary  | The system should provide a means to display challenges in order of newest to oldest list form. |
+| --- | --- |
+| Rational  | This is vital to the system because it allows users to access the list of new challenges and vote on them. Going to the newest challenge tab will promote both the growth of challenges that have recently been submitted and the novelty of original and creative challenge submission. |
+| Requirements | The system should display a list of challenges from newest to oldest. System would require a timestamp on each challenge to keep of when the challenge was submitted. With one click a user may navigate to any of the other tabs(hottest and top). |
+
+**FR-6 Get Hot/Trending Challenge List**
+
+| Summary | The system should allow the user to view challenges according to their &quot;trendiness.&quot; Trendiness is the relation between a challenge&#39;s popularity and the recentness of its submission. |
+| --- | --- |
+| Rational | Ensuring that the user can view challenges according to their recent popularity is vital to creating both a current and refreshing list of popular challenges and giving a positive user experience. |
+| Requirements | The system should default to the hot tab. If not on the tab already, the user can click the &quot;Hot&quot; tab on the main page; in response, the system will show the user the appropriate list. This list ordering is based on using an algorithm that determines a challenge&#39;s popularity using a challenge&#39;s net votes in relation to recentness of submission of the challenge. The user can navigate to other filter tabs(hot, most popular) with one click. |
+
+**FR-7 Calculate Point Worth For Challenges**
+
+| Summary | The system should provide a challenge&#39;s worth(in points) based on the amount of users that have voted upon it as well as the ratio of upvotes to downvotes. |
+| --- | --- |
+| Rational | If a user is determined to have successfully completed a challenge, then that user will be awarded points based on a ratio of users that have voted on the challenge&#39;s worth. |
+| Requirements | The system will have a tracker for the amount of voters that have voted on a challenge compared to the total number of registered users. It will also have a tracker for how many upvotes and downvotes a challenge gets. A ratio will be computed for how many users have voted upon a challenge compared to how many active users on the site. An arbitrary algorithm calculates the point worth of a challenge. |
+
+**FR-8 Determine Video Success/Failure**
+
+| Summary | The system requires a feature through which a user succeeds(and is awarded points) or fails at a challenge based on the video they submit. |
+| --- | --- |
+| Rational | For a user to aquire points from the system, they must have more upvotes than downvotes on their video submission to a challenge. Other users view the video and determine whether or not the submitter succeeds or fails a challenge. |
+| Requirements | This system needs a feature that allows users to vote up or down on a video, as well as a tracker to keep how many upvotes and downvotes a video gets. Video submissions must be stored in the database so the system can access them. |
+
+
+
+
+
+**FR-9   Entering and Storage of Video Submissions in Database**
+
+| Summary | The system should transfer the user submitted video link from the GUI to the user database. |
+| --- | --- |
+| Rational | Storing a video submission relative to its challenge is essential to the user viewing the desired content. |
+| Requirements | The user can click the &quot;submit&quot; button next to a certain challenge. Upon clicking said button, the system will prompt the user to enter a video link and displays a warning for submitting videos. The user can enter the link to the desired YouTube video to be uploaded in the previously mentioned user prompt. The user can click submit to send the link to be entered in the video database. |
+
+**FR-10 Entering and Storage of Challenges in Database**
+
+| Summary | The system should store challenges and their attributes in the challenge database. |
+| --- | --- |
+| Rational | Storing a challenge in the database is essential to providing the user content to browse as well as listing the challenges according to desired filter. |
+| Requirements | The user can click &quot;Challenge Other Players.&quot; Upon the user click, the system prompts the user to enter challenge title and description. The user can click &quot;Challenge Them!&quot; The system responds by transferring the new challenge data to the challenge database and displaying the challenge on web page. |
+
+**FR-11 Creation/Store New Users in Database**
+
+| Summary | The user should be able to enter his personal information and submit it to the system. The system should store newly created user account information in the Database. |
+| --- | --- |
+| Rational | Growing the user base of the product is directly related to the success of the system. Therefore it is essential that users be able to create an account and use it immediately. |
+| Requirements | The user will have the option to click on the create new account button. If clicked, the system should prompt the user for a user name, email address, age, and password. The user needs to verify that their chosen username is not taken. The user can then click create to &quot;submit&quot; the information. The system should store all user information in the database. The system will create and set a point value of 0 for the newly created user. Also the system will store the date of account creation |
+
+
+
+**FR-12 Return Errors For Invalid Inputs**
+
+| Summary | The system should recognize both when a user is under the age of 18 to participate and when invalid characters are used in usernames and challenge titles. Invalid YouTube video links must also be rejected by the system. |
+| --- | --- |
+| Rational | The safety of minors trying to participate in the product community is reliant on the system&#39;s ability to recognize an underage user(assuming user honesty). In order to maintain readability of challenge titles and usernames, the use of special characters[!,@,#,$,%,^,&amp;,\*,(,),etc.] will be largely disallowed: challenge titles will be allowed to use a select few special characters[! , &quot; , ( , ) , . , : , ; and ,]. Descriptions of challenges might need special characters to convey information to the user, so special characters entry will be allowed for challenge descriptions. |
+| Requirements | The user can enter text/video links on various parts of the website. After user submission of data, the system will recognize any underage users or invalid characters in usernames in the account creation scenario as well as invalid characters pertaining to a challenge&#39;s title in the challenge creation scenario. The system can verify if submissions for video links are in fact links to YouTube videos. |
+
+**FR-13 Login/Logout**
+
+| Summary | The system should provide a login and logout feature for users who have accounts to get access to user restricted features. |
+| --- | --- |
+| Rational | A login system is necessary to allow the user access to his account&#39;s video submissions as well as the points they have gained from the  videos. |
+| Requirements | A database to store all user information is necessary. A verification feature is required to check whether or not a user&#39;s login information is correct and matches his password. If a user is already logged in, instead of a button for logging in a button for logging out should be displayed. |
+
+
+
+**FR-14 Adds Restrictions to Unregistered Users**
+
+| Summary | Users that are not logged into their accounts have restricted access to the website. |
+| --- | --- |
+| Rational | Users that are anonymous should not have the ability to vote or submit videos. |
+| Requirements | The systems should detect that there is no account logged in. If the user clicks on a vote button or tries to submit a video, a pop up with come up and prompts the user to log in. |
+
+**FR-15 User Can Access Their Account Information**
+
+| Summary | The system should allow users to view the amount of points they achieved as well as the video submissions for challenges they have completed. |
+| --- | --- |
+| Rational | Users should have an account that shows their current lifetime point total in order to gauge their progress. |
+| Requirements | The system should have a database with users&#39; accounts and their information. The system should be displayed as a pop up after the information button is clicked that displays the user&#39;s video submissions, and current lifetime point total. |
+
+**FR-16 Prompt Login/Signup**
+
+| Summary | The system should allow users to log in to their accounts or create accounts to gain access to voting and submission and to user account info. The accounts should be unique with individual statistics within them. |
+| --- | --- |
+| Rational | Voting and challenge submission is only available to registered and logged in users. The user should have an account that is accessible to him and only him. |
+| Requirements | The system should prompt the user to log in to their account. If the user doesn&#39;t have an account yet, the system would prompt the user to create one. The user can enter his information regarding age, username, e-mail address, and password. User can click &quot;Create.&quot; Once created, the system will prompt the user to log in again. Once the user logs in, the system should access the database and retrieve all the information related to that account. The user&#39;s account information should be saved once the account is logged out or when the page is closed. |
+
+**FR-17 User Can Report Dangerous/Illegal Challenges/Ideas**
+
+| Summary | The system should allow users to report any challenges or ideas that are physically dangerous to the users, sexually inappropriate, illegal, invoke harm to another human, either physically or emotionally. |
+| --- | --- |
+| Rational | If any challenges or ideas meet the descriptions above, stakeholders could be held liable, so we would like to take care of anything that could potentially harm stakeholders. |
+| Requirements | The system should allow the user to click on a button to report the challenge/idea with a description of the reason why it should be reported. |
+
+**FR-18 Moderators Can Remove Challenges/Videos**
+
+| Summary | The system should allow moderators to delete challenge ideas and submitted videos. |
+| --- | --- |
+| Rational | The system will be used to allow moderators to delete videos if they fit the descriptions they were reported for. |
+| Requirements | The system should prompt the moderators to see if they would like to delete the video. The system should find the video in the database and then delete it. |
+
+**FR-19 Users Can Retract Video Submissions After Point of Submission**
+
+| Summary | The system should allow users to remove videos after they submit it. |
+| --- | --- |
+| Rational | The system will be used to help users delete videos if they accidentally submit a video or regret posting a video. |
+| Requirements | The system should prompt the user to see if they would like to delete their video. The system should find the video in the database and then delete the link to it. |
+
+**FR-20 Users Can Access a User Leaderboard**
+
+| Summary | The system should allow users to view their community rank in relation to other users. |
+| --- | --- |
+| Rational | Allowing users to view their current leaderboard position as well as the positions of the top users is essential to provide incentive for users to complete challenges. |
+| Requirements | The user can click the &quot;Leaderboard&quot; button. The system will redirect the user to the leaderboard page and display the leaderboard list in the UI. The user can click the &quot;Top Players&quot; tab. The system will display the 15 users with the most points in the community. The user can click the &quot;my rank&quot; tab. The system will display the 7 other users directly above the user in rank, the user, and the 7 other users directly below the user in rank. The leaderboard page will default to the &quot;top&quot; tab. |
 
    
 **5. Other Nonfunctional Requirements**
