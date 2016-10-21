@@ -88,7 +88,7 @@
 | Mahdi Judeh | 10/20/16 | Adding the External Interface requirements | 1.0 |
 | Benjamin Bordelon | 10/20/16 | Adding &quot;Other Nonfunctional Requirements&quot; | 1.1 |
 | Blake Rousell | 10/21/16 | Reviewed and Edited Document | 1.1 |
-
+| Benjamin Bordelon, Mahdi Judeh, Harry Ly, Alex Pagan, Blake Rousell | 10/21/16 | Reviewed and Edited Document | 2.0 |
 
 
 **1. Introduction**
