@@ -19,7 +19,7 @@
 
 **Revision History       **
 
-**1.        Introduction       **
+**1. Introduction**
 
 1.1        Purpose
 
@@ -31,7 +31,7 @@
 
 1.5        References
 
-**2.        Overall Description       **
+**2. Overall Description**
 
 2.1        Product Perspective
 
@@ -47,7 +47,7 @@
 
 2.7        Assumptions and Dependencies
 
-**3.        External Interface Requirements       **
+**3. External Interface Requirements**
 
 3.1        User Interfaces
 
@@ -57,13 +57,13 @@
 
 3.4        Communications Interfaces
 
-**4.        System Features       **
+**4. System Features**
 
 4.1        System Feature 1
 
 4.2        System Feature 2 (and so on)
 
-**5.        Other Nonfunctional Requirements       **
+**5. Other Nonfunctional Requirements**
 
 5.1        Performance Requirements
 
@@ -75,13 +75,13 @@
 
 5.5        Business Rules
 
-**6.        Other Requirements       **
+**6. Other Requirements**
 
-**Appendix A: Glossary       **
+**Appendix A: Glossary**
 
-**Appendix B: Analysis Models       **
+**Appendix B: Analysis Models**
 
-**Appendix C: To Be Determined List       **
+**Appendix C: To Be Determined List**
 
 **Revision History**
 
