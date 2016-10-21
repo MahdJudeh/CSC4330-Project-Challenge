@@ -252,13 +252,13 @@ Product usability is essential to the success of our product. Navigating the UI(
 
   **2. Availability**
 
-    The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since altering structure of the database is the only scenario where the server would experience scheduled downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or immediately required under the condition that a bug arises.
+The program excluding the user database(written in SQL) will be written in HTML. This allows the development team to utilize live updates, thereby minimizing product downtime. Since altering structure of the database is the only scenario where the server would experience scheduled downtime, it is estimated that the product can expect about 99% availability. In other words, the user should expect server downtime due to an update about once every 3 months or immediately required under the condition that a bug arises.
 
   **3. Robustness**
 
 In accordance with the 18+ age policy implemented for the product, the user must provide his age when he creates an account in the user database. Assuming the user is entering his true age, the safety of underage users rely on the robustness of the software. The prevention of identical usernames is also relevant when considering software robustness. To ensure our system operates appropriately when given invalid or unacceptable input, the developers should utilize fuzz testing when coding the user database, the account creation module, and challenge creation module.
 
-  ** 4. Interoperability**
+  **4. Interoperability**
 
 The product utilizes an SQL database to store user information, and transfers this information in real time to a website. Therefore it is essential that these two major software components are able to cooperate in a way that minimizes user inconvenience. Updating user/vote/challenge data should be done quickly(in under 10 seconds).
 
