@@ -207,7 +207,7 @@ _The system shall use HTTP for communication over the internet._
 
       **2.  Calculating and Allotting Point Worth**
 
-**       ** The system must be able to calculate the worth of a challenge through a specified algorithm and allot the appropriate points to users who successfully complete a challenge, all within a reasonable amount of time. The user should be able to view their updated current point total(including the  specified challenge&#39;s calculated point worth) within 5 seconds of being awarded the points.
+The system must be able to calculate the worth of a challenge through a specified algorithm and allot the appropriate points to users who successfully complete a challenge, all within a reasonable amount of time. The user should be able to view their updated current point total(including the  specified challenge&#39;s calculated point worth) within 5 seconds of being awarded the points.
 
 
 
@@ -231,7 +231,7 @@ If a user submits a challenge involving an individual&#39;s property or public p
 
      **1. Account Security**
 
-**       ** Due to sensitive information being contained within the user database, it must be ensured that each user is the only user able to access his own account. The user login feature will ensure a user&#39;s information remains private by requiring validation of a user&#39;s username and password. In order to prevent access from unwanted users(possibly on a public computer), a forced log-out will be implemented to log the user out as soon as the web page is closed.
+Due to sensitive information being contained within the user database, it must be ensured that each user is the only user able to access his own account. The user login feature will ensure a user&#39;s information remains private by requiring validation of a user&#39;s username and password. In order to prevent access from unwanted users(possibly on a public computer), a forced log-out will be implemented to log the user out as soon as the web page is closed.
 
 
 
@@ -239,7 +239,7 @@ If a user submits a challenge involving an individual&#39;s property or public p
 
      **1. Usability**
 
-**       ** Product usability is essential to the success of our product. Navigating the GUI(Graphical User Interface) of the product should be easy, simple, and intuitive. We will implement a home page(with tabs for newest, hot, and most popular challenge) and a user account page for each user. These pages should each be able to be accessed in 1 click, assuming the user is already logged in to his account. This requires &quot;Home&quot; and &quot;My Account&quot; buttons to be available to the user from any location on the website that redirects the user to the appropriate page.
+Product usability is essential to the success of our product. Navigating the GUI(Graphical User Interface) of the product should be easy, simple, and intuitive. We will implement a home page(with tabs for newest, hot, and most popular challenge) and a user account page for each user. These pages should each be able to be accessed in 1 click, assuming the user is already logged in to his account. This requires &quot;Home&quot; and &quot;My Account&quot; buttons to be available to the user from any location on the website that redirects the user to the appropriate page.
 
    ** 2. Availability**
 
@@ -251,18 +251,18 @@ In accordance with the 18+ age policy implemented for the product, the user must
 
   ** 4. Interoperability**
 
-**       ** The product utilizes an SQL database to store user information, and transfer this information in real time to a website coded in HTML containing the GUI. Therefore it is essential that these two major software components are able to cooperate in a way that minimizes user inconvenience. The communication between the two components must be efficient and effortless for the user. Updating user/vote data should be near instant(under 3 seconds).
+The product utilizes an SQL database to store user information, and transfer this information in real time to a website coded in HTML containing the GUI. Therefore it is essential that these two major software components are able to cooperate in a way that minimizes user inconvenience. The communication between the two components must be efficient and effortless for the user. Updating user/vote data should be near instant(under 3 seconds).
 
 
    **5.5 Business Rules**
 
       **1. Guest User**
 
-**       ** Guest users will not have all of the same available actions that product members will receive. Guests users are able to watch video submissions in reply to challenges and navigate the home page to choose whichever challenge thread is desired.
+Guest users will not have all of the same available actions that product members will receive. Guests users are able to watch video submissions in reply to challenges and navigate the home page to choose whichever challenge thread is desired.
 
-   **   2. Member User**
+   **2. Member User**
 
-**       ** Member users will be able to explore the home page and watch video submissions for challenges just as guest users can do. In addition, members can themselves create and submit challenges and upload video submissions in reply to challenges. Members will be able to take part in the voting system regarding challenges and video submissions.
+Member users will be able to explore the home page and watch video submissions for challenges just as guest users can do. In addition, members can themselves create and submit challenges and upload video submissions in reply to challenges. Members will be able to take part in the voting system regarding challenges and video submissions.
 
 
   **6. Other Requirements**
@@ -272,4 +272,3 @@ In accordance with the 18+ age policy implemented for the product, the user must
 
 **Appendix C: To Be Determined List**
 
-_&lt;Collect a numbered list of the TBD (to be determined) references that remain in the SRS so they can be tracked to closure.&gt;_
