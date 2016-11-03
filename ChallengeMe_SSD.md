@@ -10,16 +10,20 @@
 Table of Contents	
 [Revision History](#Revision)
 <ol>
-	<li> [Introduction](#intro)
+    <li> [Introduction](#intro)
+	<ol>
 	   <li> [Purpose of this Document](#purpose)</li>
 	   <li> [Scope of the Development Project](#scope)</li>
 	   <li> [References](#references)</li>
 	   <li> [Overview of Document](#docOverview)</li>
-	</li>
+	</ol>
+   </li>
 <li> [Main System Architecture (Logical View)](#mainSys)
-   <li> [Overview of Modules/Components](#compOverview)</li>
-   <li> [Structure and Relationships](#stuctureR)</li>	
-   <li> [User Interface Issues](#userII)</li>
+   <ol>
+       <li> [Overview of Modules/Components](#compOverview)</li>
+       <li> [Structure and Relationships](#stuctureR)</li>	
+       <li> [User Interface Issues](#userII)</li>
+   </ol>
 </li>
 <li> [Sub-systems Architecture](#subSys)	
    <ol>
