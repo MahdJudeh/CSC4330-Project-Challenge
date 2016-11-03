@@ -10,52 +10,52 @@
 Table of Contents	
 [Revision History](#Revision)
 <ol>
-    <li> <a href="#purpose">Introduction](#intro)
+<li> <a href="#purpose">Introduction</a>
 	<ol>
 	   <li> <a href="#purpose">Purpose of this Document</a> </li>
-	   <li> <a href="#scope">Scope of the Development Project</a>(#scope) </li>
-	   <li> <a href="#references">References</a>(#references) </li>
-	   <li> <a href="#docOverview">Overview of Document</a>(#docOverview) </li>
+	   <li> <a href="#scope">Scope of the Development Project</a> </li>
+	   <li> <a href="#references">References</a></li>
+	   <li> <a href="#docOverview">Overview of Document</a></li>
 	</ol>
    </li>
-<li> [Main System Architecture (Logical View)</a>(#mainSys)
+<li> <a href="#mainSys">Main System Architecture (Logical View)</a>
    <ol>
-       <li> <a href="#compOverview">Overview of Modules/Components</a>(#compOverview) </li>
-       <li> <a href="#structureR">Structure and Relationships</a>(#stuctureR) </li>	
-       <li> <a href="#userII">User Interface Issues</a>(#userII) </li>
+       <li> <a href="#compOverview">Overview of Modules/Components</a> </li>
+       <li> <a href="#structureR">Structure and Relationships</a> </li>	
+       <li> <a href="#userII">User Interface Issues</a> </li>
    </ol>
 </li>
-<li> <a href="#purpose">Sub-systems Architecture</a>(#subSys)	
+<li> <a href="#purpose">Sub-systems Architecture</a>	
    <ol>
-   	<li> <a href="#database">Database</a>(#database) </li>
-   	<li> <a href="#webdata">Web-application-data</a>(#webdata) </li>
-   	<li> <a href="#updateD">Update Database</a>(#updateD) </li>
-  	<li> <a href="#updateV">Update View</a>(#updateV) </li>
-   	<li> <a href="#submit">Submit</a>(#submit) </li>
-   	<li> <a href="#vote">Vote</a>(#vote) </li>
-   	<li> <a href="#delete">Delete</a>(#delete) </li>
-   	<li> <a href="#account">Account</a>(#account) </li>
+   	<li> <a href="#database">Database</a> </li>
+   	<li> <a href="#webdata">Web-application-data</a> </li>
+   	<li> <a href="#updateD">Update Database</a> </li>
+  	<li> <a href="#updateV">Update View</a></li>
+   	<li> <a href="#submit">Submit</a> </li>
+   	<li> <a href="#vote">Vote</a> </li>
+   	<li> <a href="#delete">Delete</a> </li>
+   	<li> <a href="#account">Account</a> </li>
    </ol>
 </li>
-<li> <a href="#rationale">Rationale for each Architectural Choice</a>(#rationale)</li>
-<li> <a href="#developView">Development View</a>(#delevopView)</li>
-<li> <a href="#physView">Physical View</a>(#physView)</li>
-<li> <a href="#databaseView">Database View</a>(databaseView)</li>
-<li> <a href="#workView">Work-assignment View</a>(#workView)</li>
-<li> <a href="#elementCatalog">Element Catalog</a>(#elementcatolog)
+<li> <a href="#rationale">Rationale for each Architectural Choice</a></li>
+<li> <a href="#developView">Development View</a></li>
+<li> <a href="#physView">Physical View</a></li>
+<li> <a href="#databaseView">Database View</a></li>
+<li> <a href="#workView">Work-assignment View</a></li>
+<li> <a href="#elementCatalog">Element Catalog</a>
     <ol>
-	<li> <a href="#logicalC">Logical View Diagram</a>(#logicalC)</li>
-   	<li> <a href="#physC">Physical View Diagram</a>(#physC)</li>
-   	<li> <a href="#developC">Development View Diagram</a>(#developC)</li>
-   	<li> <a href="#workC">Work-Assignment View Diagram</a>(#workC)</li>
-   	<li> <a href="#userC">User Interface Diagram</a>(#userC)</li>
-   	<li> <a href="#databaseC">Database Diagram</a>(#databaseC)</li>
+	<li> <a href="#logicalC">Logical View Diagram</a></li>
+   	<li> <a href="#physC">Physical View Diagram</a></li>
+   	<li> <a href="#developC">Development View Diagram</a></li>
+   	<li> <a href="#workC">Work-Assignment View Diagram</a></li>
+   	<li> <a href="#userC">User Interface Diagram</a></li>
+   	<li> <a href="#databaseC">Database Diagram</a></li>
    </ol>
 </li>
-<li> <a href="#UI">User Interfaces</a>(#UI)
+<li> <a href="#UI">User Interfaces</a>
     <ol>
-    	<li> <a href="#UIDes">User Interface Description</a>(#UIDes)</li>
-    	<li> <a href="#UIDia">User Interface Diagram</a>(#UIDia)</li>
+    	<li> <a href="#UIDes">User Interface Description</a></li>
+    	<li> <a href="#UIDia">User Interface Diagram</a></li>
     </ol>
 </li>
 </ol>
