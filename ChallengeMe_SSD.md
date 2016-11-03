@@ -10,52 +10,52 @@
 Table of Contents	
 [Revision History](#Revision)
 <ol>
-    <li> [Introduction](#intro)
+    <li> <a href="#purpose">Introduction](#intro)
 	<ol>
 	   <li> <a href="#purpose">Purpose of this Document</a> </li>
-	   <li> [Scope of the Development Project](#scope) </li>
-	   <li> [References](#references) </li>
-	   <li> [Overview of Document](#docOverview) </li>
+	   <li> <a href="#scope">Scope of the Development Project</a>(#scope) </li>
+	   <li> <a href="#references">References</a>(#references) </li>
+	   <li> <a href="#docOverview">Overview of Document</a>(#docOverview) </li>
 	</ol>
    </li>
-<li> [Main System Architecture (Logical View)](#mainSys)
+<li> [Main System Architecture (Logical View)</a>(#mainSys)
    <ol>
-       <li> [Overview of Modules/Components](#compOverview) </li>
-       <li> [Structure and Relationships](#stuctureR) </li>	
-       <li> [User Interface Issues](#userII) </li>
+       <li> <a href="#compOverview">Overview of Modules/Components</a>(#compOverview) </li>
+       <li> <a href="#structureR">Structure and Relationships</a>(#stuctureR) </li>	
+       <li> <a href="#userII">User Interface Issues</a>(#userII) </li>
    </ol>
 </li>
-<li> [Sub-systems Architecture](#subSys)	
+<li> <a href="#purpose">Sub-systems Architecture</a>(#subSys)	
    <ol>
-   	<li> [Database](#database) </li>
-   	<li> [Web-application-data](#webdata) </li>
-   	<li> [Update Database](#updateD) </li>
-  	<li> [Update View](#updateV) </li>
-   	<li> [Submit](#submit) </li>
-   	<li> [Vote](#vote) </li>
-   	<li> [Delete](#delete) </li>
-   	<li> [Account](#account) </li>
+   	<li> <a href="#database">Database</a>(#database) </li>
+   	<li> <a href="#webdata">Web-application-data</a>(#webdata) </li>
+   	<li> <a href="#updateD">Update Database</a>(#updateD) </li>
+  	<li> <a href="#updateV">Update View</a>(#updateV) </li>
+   	<li> <a href="#submit">Submit</a>(#submit) </li>
+   	<li> <a href="#vote">Vote</a>(#vote) </li>
+   	<li> <a href="#delete">Delete</a>(#delete) </li>
+   	<li> <a href="#account">Account</a>(#account) </li>
    </ol>
 </li>
-<li> [Rationale for each Architectural Choice](#rationale)</li>
-<li> [Development View](#delevopView)</li>
-<li> [Physical View](#physView)</li>
-<li> [Database View](databaseView)</li>
-<li> [Work-assignment View](#workView)</li>
-<li> [Element Catalog](#elementcatolog)
+<li> <a href="#rationale">Rationale for each Architectural Choice</a>(#rationale)</li>
+<li> <a href="#developView">Development View</a>(#delevopView)</li>
+<li> <a href="#physView">Physical View</a>(#physView)</li>
+<li> <a href="#databaseView">Database View</a>(databaseView)</li>
+<li> <a href="#workView">Work-assignment View</a>(#workView)</li>
+<li> <a href="#elementCatalog">Element Catalog</a>(#elementcatolog)
     <ol>
-	<li> [Logical View Diagram](#logicalC)</li>
-   	<li> [Physical View Diagram](#physC)</li>
-   	<li> [Development View Diagram](#developC)</li>
-   	<li> [Work-Assignment View Diagram](#workC)</li>
-   	<li> [User Interface Diagram](#userC)</li>
-   	<li> [Database Diagram](#databaseC)</li>
+	<li> <a href="#logicalC">Logical View Diagram</a>(#logicalC)</li>
+   	<li> <a href="#physC">Physical View Diagram</a>(#physC)</li>
+   	<li> <a href="#developC">Development View Diagram</a>(#developC)</li>
+   	<li> <a href="#workC">Work-Assignment View Diagram</a>(#workC)</li>
+   	<li> <a href="#userC">User Interface Diagram</a>(#userC)</li>
+   	<li> <a href="#databaseC">Database Diagram</a>(#databaseC)</li>
    </ol>
 </li>
-<li> [User Interfaces](#UI)
+<li> <a href="#UI">User Interfaces</a>(#UI)
     <ol>
-    	<li> [User Interface Description](#UIDes)</li>
-    	<li> [User Interface Diagram](#UIDia)</li>
+    	<li> <a href="#UIDes">User Interface Description</a>(#UIDes)</li>
+    	<li> <a href="#UIDia">User Interface Diagram</a>(#UIDia)</li>
     </ol>
 </li>
 </ol>
@@ -76,15 +76,15 @@ Table of Contents
 
 
 =================================================================================================================
-## 1.	Introduction <a name="Revision"></a> 
+## 1.	Introduction <a name="intro"></a> 
    1.	Purpose of this Document <a name="Revision"></a> 
 The purpose of this document is to describe the implementation of the ChallengeMe! website based on the description of the site given by the software requirements specification(SRS) document. Its main purpose is to provide a framework for the classes and functions that we may need.
-   2.	Scope <a name="Revision"></a> 
+   2.	Scope <a name="scope"></a> 
 ChallengeMe is a website that allows users to vote on, participate in, and submit challenges. Challenge Me aims to provide users with a medium to show off their skills and talents to their friends and people around the world. The website will frequently update with user-submitted challenges and developer submitted challenges in order to constantly supply users with challenges to watch and participate in.
-   3.	References <a name="Revision"></a> 
+   3.	References <a name="references"></a> 
 IEEE Standard 1016 : Software design Specification https://www.ieee.org/ 
 ChallengeMe! Software Requirements Specifications Document	
-   4.	Overview of Document <a name="Revision"></a> 
+   4.	Overview of Document <a name="docOverview"></a> 
         1. Introduction: Gives a brief introduction to the project including its purpose,scope, references and overview of the total document. 
         2. Main System Architecture: Gives a view of the design of the main system, \subsystems, and how they relate in the case of the final product. 
         3. Sub¬systems Architecture: Describes the design of each individual subsystem. 
