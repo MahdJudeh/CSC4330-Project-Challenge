@@ -10,21 +10,21 @@
 Table of Contents	
 [Revision History](#Revision)	
 1. Introduction	
-   * 1.1	Purpose of this Document
-   * 1.2	Scope of the Development Project
-   * 1.3	References 
-   * 1.4	Overview of Document	
+   * 1.1 Purpose of this Document
+   * 1.2 Scope of the Development Project
+   * 1.3 References 
+   * 1.4 Overview of Document	
 2. Main System Architecture (Logical View)	
-   * 2.1	Overview of Modules/Components	
-   * 2.2	Structure and Relationships	
-   * 2.3	User Interface Issues	
+   * 2.1 Overview of Modules/Components	
+   * 2.2 Structure and Relationships	
+   * 2.3 User Interface Issues	
 3. Sub-systems Architecture	
-   * 3.1	Database
-   * 3.2	Web-application
-   * 3.3	Update Database	
-   * 3.4	Update View
-   * 3.5	Submit
-   * 3.6	Vote
+   * 3.1 Database
+   * 3.2 Web-application
+   * 3.3 Update Database	
+   * 3.4 Update View
+   * 3.5 Submit
+   * 3.6 Vote
    * 3.7 Delete
    * 3.8 Account	
 4. Rationale for each Architectural Choice	
