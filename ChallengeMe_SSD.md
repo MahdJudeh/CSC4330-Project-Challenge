@@ -12,29 +12,29 @@ Table of Contents
 <ol>
     <li> [Introduction](#intro)
 	<ol>
-	   <li> [Purpose of this Document](#purpose)</li>
-	   <li> [Scope of the Development Project](#scope)</li>
-	   <li> [References](#references)</li>
-	   <li> [Overview of Document](#docOverview)</li>
+	   <li> <a href="#purpose">Purpose of this Document</a> </li>
+	   <li> [Scope of the Development Project](#scope) </li>
+	   <li> [References](#references) </li>
+	   <li> [Overview of Document](#docOverview) </li>
 	</ol>
    </li>
 <li> [Main System Architecture (Logical View)](#mainSys)
    <ol>
-       <li> [Overview of Modules/Components](#compOverview)</li>
-       <li> [Structure and Relationships](#stuctureR)</li>	
-       <li> [User Interface Issues](#userII)</li>
+       <li> [Overview of Modules/Components](#compOverview) </li>
+       <li> [Structure and Relationships](#stuctureR) </li>	
+       <li> [User Interface Issues](#userII) </li>
    </ol>
 </li>
 <li> [Sub-systems Architecture](#subSys)	
    <ol>
-   	<li> [Database](#database)</li>
-   	<li> [Web-application-data](#webdata)</li>
-   	<li> [Update Database](#updateD)</li>
-  	<li> [Update View](#updateV)</li>
-   	<li> [Submit](#submit)</li>
-   	<li> [Vote](#vote)</li>
-   	<li> [Delete](#delete)</li>
-   	<li> [Account](#account)</li>
+   	<li> [Database](#database) </li>
+   	<li> [Web-application-data](#webdata) </li>
+   	<li> [Update Database](#updateD) </li>
+  	<li> [Update View](#updateV) </li>
+   	<li> [Submit](#submit) </li>
+   	<li> [Vote](#vote) </li>
+   	<li> [Delete](#delete) </li>
+   	<li> [Account](#account) </li>
    </ol>
 </li>
 <li> [Rationale for each Architectural Choice](#rationale)</li>
