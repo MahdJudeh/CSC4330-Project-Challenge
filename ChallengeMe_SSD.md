@@ -116,13 +116,13 @@ ChallengeMe! Software Requirements Specifications Document</p>
 <p>This will store all of the information relevant to the how the view is displayed. This will contain all of the user’s account information in our service, all of the challenges submitted to the website, and all of the videos submitted. This will also contain the html and css of the webpage.</p></li>
         <li>	Controller
 <p>This architectural component will make the calls for data to update the view and take inputs from the view to update the model.</p>
-<img src="CSC4330-Project-Challenge/model view controller diagram.png">
+<img src="model view controller diagram.png">
 </li>
    </ol>
    </li>
    <li>	Application Use Case <a name="appUse"></a> 
 <p>The ChallengeMe! website will have three types of users; a user that is not logged in, a user that is logged in, and a Moderator. A guest user has the ability to view challenges and watch submission videos.  A user with an existing account is the primary user and will be able to post and vote on challenges and videos, and be able to log out. A logged in user also inherits all of the abilities of a non-logged in user. The moderator will have all of the abilities of a user with an account as well as the ability to terminate users, challenges, and video submissions.</p>
-<img src="CSC4330-Project-Challenge/2.2 Application Use Case.png">
+<img src="2.2 Application Use Case.png">
    </li>
 </ol>
 </li>
@@ -149,14 +149,14 @@ ChallengeMe! Software Requirements Specifications Document</p>
 <li>	Rationale for each Architectural Choice <a name="rationale"></a> 
 <p>The reason we picked a model-view-controller architecture is because our system is not complex and this system describes it efficiently. Our web application would be a semi dynamic website. At any point in time if multiple users all arrive to a site at the exact same moment they will all see the same web page. If a any of these users vote or submit a challenge then the web page will update for any user who now makes a request for our webpage.</p></li>
 <li>	Development View <a name="developView"></a> 
-<img src="CSC4330-Project-Challenge/5 Developmental View.png">
+<img src="5 Developmental View.png">
 </li>
 <li>	Physical View <a name="physView"></a> > 
-<img src="CSC4330-Project-Challenge/6 Physical View.png">
+<img src="6 Physical View.png">
 <p>The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.</p></li>
 <li>	Database View <a name="databaseView"></a>
 <p>The application will utilize a database created in MySQL in order to keep track of all user account information(MySQL encrypts password data), video and challenge submissions, and users’ votes. The database will be hosted online using Google’s Cloud SQL Platform. In order for the user to be able to access and alter information contained in the database, an internet connection is required. This means that the application cannot be used in an offline environment. The purpose of the database is enable users to create their own user accounts, allowing them to submit and store both challenges for other users and video replies to said challenges, in a secure and reliable fashion. </p>
-<img src="CSC4330-Project-Challenge/7 Database View.png">
+<img src="7 Database View.png">
 <p>Any attributes labeled “(hidden)” are not going to be viewable by users and are solely for organizational purposes.</p></li>	
 <li>	Work Assignment View <a name="workView"></a>
 	
