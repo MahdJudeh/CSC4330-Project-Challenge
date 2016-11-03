@@ -13,11 +13,11 @@ Table of Contents
   1. Purpose of this Document
   2. Scope of the Development Project
   3. References 
-  4. Overview of Document	
+  4. Overview of Document
 2. Main System Architecture (Logical View)	
   1. Overview of Modules/Components	
   2. Structure and Relationships	
-  3. User Interface Issues	
+  3. User Interface Issues
 3. Sub-systems Architecture	
   1. Database
   2. Web-application
@@ -26,9 +26,9 @@ Table of Contents
   5. Submit
   6. Vote
   7. Delete
-  8. Account	
-4. Rationale for each Architectural Choice	
-5. Development View	
+  8. Account
+4. Rationale for each Architectural Choice
+5. Development View
 6. Physical View
 7. Database View
 8. Work-assignment View
