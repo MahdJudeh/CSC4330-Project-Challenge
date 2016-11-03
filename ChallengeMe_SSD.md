@@ -152,8 +152,9 @@ ChallengeMe! Software Requirements Specifications Document</p>
 <img src="/5 Developmental View.png">
 </li>
 <li>	Physical View <a name="physView"></a> > 
+<p>The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.</p>
 <img src="/6 Physical View.png">
-<p>The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.</p></li>
+</li>
 <li>	Database View <a name="databaseView"></a>
 <p>The application will utilize a database created in MySQL in order to keep track of all user account information(MySQL encrypts password data), video and challenge submissions, and users’ votes. The database will be hosted online using Google’s Cloud SQL Platform. In order for the user to be able to access and alter information contained in the database, an internet connection is required. This means that the application cannot be used in an offline environment. The purpose of the database is enable users to create their own user accounts, allowing them to submit and store both challenges for other users and video replies to said challenges, in a secure and reliable fashion. </p>
 <img src="/7 Database View.png">
@@ -207,7 +208,9 @@ Bolded Underlined Words	Indicates primary keys
     <li>	User Interface Description <a name="UIDes"></a> 
 	<p>When the user visits our web domain they will be presented with the main webpage. 
 They would have the option of logging into their already made account, sign up for a new account, or continue as a guest with certain features unavailable. If the user has to sign up, they would be asked to create a username, password, and verify their password. If the user logs in, they would be prompted to enter their username and password. Logging into their account gives them the ability to like or dislike videos and submit videos as well as challenge ideas.  If the user continues as guest, they would be limited on the amount of features available to them. They would only be able to browse the site.</p></li>
-    2. 	User Interface Diagram <a name="UIdia"></a>
+    <li> 	User Interface Diagram <a name="UIdia"></a>
+    <img src="/User Interface Diagram (1).pdf">
+    </li>
 </ol>
 </li>
 </ol> 
