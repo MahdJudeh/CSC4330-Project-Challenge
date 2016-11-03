@@ -57,7 +57,9 @@ Table of Contents
 
 
 ##  Revision History <a name="Revision"></a> 
+
 | Name	| Date	| Reason For Changes	| Version |
+| ----------------------------- | ------------- | ---------------------------- | ---------- |
 | Mahdi Judeh	| 11/2/16	| Worked on introduction and main architecture |	0.1 |
 | Ben Bordelon	| 11/2/16	| Began writing “7. Database View” |	0.2 |
 | Harry Ly	| 11/2/16	| Worked on User Interfaces |	0.3 |
