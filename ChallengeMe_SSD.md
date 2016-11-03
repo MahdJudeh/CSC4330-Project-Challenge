@@ -89,8 +89,6 @@ This will provide the entire graphical user interface. These are the subsystems 
 This will store all of the information relevant to the how the view is displayed. This will contain all of the user’s account information in our service, all of the challenges submitted to the website, and all of the videos submitted. This will also contain the html and css of the webpage.
       4.	Controller
 This architectural component will make the calls for data to update the view and take inputs from the view to update the model.
- 
-
    2.	Application Use Case
 The ChallengeMe! website will have three types of users; a user that is not logged in, a user that is logged in, and a Moderator. A guest user has the ability to view challenges and watch submission videos.  A user with an existing account is the primary user and will be able to post and vote on challenges and videos, and be able to log out. A logged in user also inherits all of the abilities of a non-logged in user. The moderator will have all of the abilities of a user with an account as well as the ability to terminate users, challenges, and video submissions.  
 3.	Sub-systems Architecture
