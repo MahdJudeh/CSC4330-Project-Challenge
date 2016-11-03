@@ -103,8 +103,8 @@ ChallengeMe! Software Requirements Specifications Document</p>
 		</ol>
    </ol> 
    </li>
-======================================================================================================================================
-## <li>	Main System Architecture <a name="mainSys"></a> 
+
+<li>	Main System Architecture <a name="mainSys"></a> 
 <ol>
    <li>	Complete System Overview <a name="compOverview"></a>
    <ol>
