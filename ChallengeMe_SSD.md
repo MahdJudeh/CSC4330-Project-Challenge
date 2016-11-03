@@ -116,7 +116,7 @@ ChallengeMe! Software Requirements Specifications Document</p>
 <p>This will store all of the information relevant to the how the view is displayed. This will contain all of the user’s account information in our service, all of the challenges submitted to the website, and all of the videos submitted. This will also contain the html and css of the webpage.</p></li>
         <li>	Controller
 <p>This architectural component will make the calls for data to update the view and take inputs from the view to update the model.</p>
-<img src="http://imgur.com/8nwWr5a">
+![Alt text](http://imgur.com/8nwWr5a)
 </li>
    </ol>
    </li>
