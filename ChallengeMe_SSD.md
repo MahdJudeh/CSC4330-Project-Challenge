@@ -111,9 +111,9 @@ ChallengeMe! Software Requirements Specifications Document</p>
         <li>	Overview
 <p>ChallengeMe! is a project which at its center desires to be a location for users to participate in challenges and submit challenges for others to complete in an internet community. It is intended to be simple to navigate and have a user interface that does not require over 10 minutes to learn. The website will provide a view of all of the available challenges and allow users to sort between challenges based on their popularity, newness, or trendiness. The user can click on a challenge to view it. The user can sign up to gain the ability to vote on challenges and submit challenges, as well as vote on videos and submit videos. Once logged in, the user will have the previously mentioned features as well the ability to logout and view their account information. If the user sees an illegal post that user can report that challenge/video. Moderator users should be able to purge posts with a click and the system should remove the post from a database. The user will also have the option to compare their total points against other users to check their ranking.</p></li>
         <li>	View
-<p>This will provide the entire graphical user interface. These are the subsystems used: view, submit challenge, submit video, vote challenge, vote video, login, logout, signup, report, delete, and sort challenges(hot, top, new).</p> <li> 
+<p>This will provide the entire graphical user interface. These are the subsystems used: view, submit challenge, submit video, vote challenge, vote video, login, logout, signup, report, delete, and sort challenges(hot, top, new).</p> </li> 
         <li>	Model
-<p>This will store all of the information relevant to the how the view is displayed. This will contain all of the user’s account information in our service, all of the challenges submitted to the website, and all of the videos submitted. This will also contain the html and css of the webpage.</p><li>
+<p>This will store all of the information relevant to the how the view is displayed. This will contain all of the user’s account information in our service, all of the challenges submitted to the website, and all of the videos submitted. This will also contain the html and css of the webpage.</p></li>
         <li>	Controller
 <p>This architectural component will make the calls for data to update the view and take inputs from the view to update the model.</p></li>
    </ol>
@@ -123,46 +123,52 @@ ChallengeMe! Software Requirements Specifications Document</p>
    </li>
 </ol>
 </li>
-3.	Sub-systems Architecture <a name="subSys"></a> 
-    1.	Database
-This subsystem is used by the Model component of our main architecture. This will store a user table, challenge table, and video table. See 7.1 for a visual representation of this component and the contents of each table in the database.
-    2.	Web-application Data
-This subsystem contains the html and css used to style the view.
-    3.	Update Database
-This subsystem is part of the Controller component of our main architecture. This is called whenever the view tells the controller that the user has made a request that requires one of the tables in the database to be updated.
-    4.	Update View
-This is also part of the Controller component of our main architecture. After a database has been updated the 
-    5.	Submit
-This subsystem is responsible for all the submits sent from the view to the controller requesting an update/action. This will include the classes for submitting challenges, submitting videos.
-    6.	Vote
-This subsystem is part of the view and it is responsible for locally incrementing the vote values and letting the controller know that changes have occurred in the view that require changes in the database.
-    7.	Delete
-This subsystem is part of the view and it is responsible for removing challenges, users, and videos. Once a user completes a delete action the view will let the database 
-    8.	Account
-Part of the view and is responsible for allowing users to signup, login, and logout. Once a user makes any of these actions inform the controller that the user’s account information needs to be saved or verified depending on the action that is taken.
-4.	Rationale for each Architectural Choice <a name="rationale"></a> 
-The reason we picked a model-view-controller architecture is because our system is not complex and this system describes it efficiently. Our web application would be a semi dynamic website. At any point in time if multiple users all arrive to a site at the exact same moment they will all see the same web page. If a any of these users vote or submit a challenge then the web page will update for any user who now makes a request for our webpage.
-5.	Development View <a name="developView"></a> 
-6.	Physical View <a name="physView"></a> > 
-The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.
-7.	Database View <a name="databaseView"></a> 
-The application will utilize a database created in MySQL in order to keep track of all user account information(MySQL encrypts password data), video and challenge submissions, and users’ votes. The database will be hosted online using Google’s Cloud SQL Platform. In order for the user to be able to access and alter information contained in the database, an internet connection is required. This means that the application cannot be used in an offline environment. The purpose of the database is enable users to create their own user accounts, allowing them to submit and store both challenges for other users and video replies to said challenges, in a secure and reliable fashion. 
+<li>	Sub-systems Architecture <a name="subSys"></a> 
+<ol>
+    <li>	Database
+<p>This subsystem is used by the Model component of our main architecture. This will store a user table, challenge table, and video table. See 7.1 for a visual representation of this component and the contents of each table in the database.</p></li>
+    <li>	Web-application Data
+    <p>This subsystem contains the html and css used to style the view.</p></li>
+    <li>	Update Database
+    <p>This subsystem is part of the Controller component of our main architecture. This is called whenever the view tells the controller that the user has made a request that requires one of the tables in the database to be updated.</p></li>
+    <li>	Update View
+<p>This is also part of the Controller component of our main architecture. After a database has been updated the</p> </li>
+    <li>	Submit
+    <p>This subsystem is responsible for all the submits sent from the view to the controller requesting an update/action. This will include the classes for submitting challenges, submitting videos.</p></li>
+    <li>	Vote
+<p>This subsystem is part of the view and it is responsible for locally incrementing the vote values and letting the controller know that changes have occurred in the view that require changes in the database.</p><li>
+    <li>	Delete
+<p>This subsystem is part of the view and it is responsible for removing challenges, users, and videos. Once a user completes a delete action the view will let the database</p><li> 
+    <li>	Account
+    <p>Part of the view and is responsible for allowing users to signup, login, and logout. Once a user makes any of these actions inform the controller that the user’s account information needs to be saved or verified depending on the action that is taken.</p><li>
+</ol>
+</li>
+<li>	Rationale for each Architectural Choice <a name="rationale"></a> 
+<p>The reason we picked a model-view-controller architecture is because our system is not complex and this system describes it efficiently. Our web application would be a semi dynamic website. At any point in time if multiple users all arrive to a site at the exact same moment they will all see the same web page. If a any of these users vote or submit a challenge then the web page will update for any user who now makes a request for our webpage.</p></li>
+</li>	Development View <a name="developView"></a> </li>
+<li>	Physical View <a name="physView"></a> > 
+<p>The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.</p><li>
+<li>	Database View <a name="databaseView"></a> 
+<p>The application will utilize a database created in MySQL in order to keep track of all user account information(MySQL encrypts password data), video and challenge submissions, and users’ votes. The database will be hosted online using Google’s Cloud SQL Platform. In order for the user to be able to access and alter information contained in the database, an internet connection is required. This means that the application cannot be used in an offline environment. The purpose of the database is enable users to create their own user accounts, allowing them to submit and store both challenges for other users and video replies to said challenges, in a secure and reliable fashion. </p>
  
-Any attributes labeled “(hidden)” are not going to be viewable by users and are solely for organizational purposes.	
-8.	Work Assignment View <a name="workView"></a> 
+<p>Any attributes labeled “(hidden)” are not going to be viewable by users and are solely for organizational purposes.</p></li>	
+<li>	Work Assignment View <a name="workView"></a>
 	
 Front End(website) / User interface / HTML	Harry Ly, Mahdi Judeh
 Backend / Database / Server / SQL	Ben Bordelon, Blake Roussel, Alexander Pagan
 
-Work for the system has been assigned based on team members familiarity with technologies used for a certain aspect of the build. The front end of the system, having to do with UI, was assigned to Mahdi, who has experience with web development. Harry took interest in designing the front end and wanted to take the opportunity to learn web design. Ben was assigned to back-end systems wirtten in PHP and SQL. Blake was also tasked with databases because he has experience with SQL. Alexander helped with designing the database and documentation.
-9.	Element Catalog <a name="elementCatalog"></a> 
-    1.	Logical View Diagram <a name="developView"></a> 
+<p>Work for the system has been assigned based on team members familiarity with technologies used for a certain aspect of the build. The front end of the system, having to do with UI, was assigned to Mahdi, who has experience with web development. Harry took interest in designing the front end and wanted to take the opportunity to learn web design. Ben was assigned to back-end systems wirtten in PHP and SQL. Blake was also tasked with databases because he has experience with SQL. Alexander helped with designing the database and documentation.</p>
+</li>
+<li>	Element Catalog <a name="elementCatalog"></a>
+<ol>
+    <li>	Logical View Diagram <a name="developView"></a> 
     Element	Description
  	Box to describe entities such as Model, Controller, and View
  	Arrow to describe the logical flow
  	Ellipses to describe actions invoked by entities
 	Bullets to describe subsystems
-    2.	Physical View Diagram <a name="physC"></a> 
+    </li>
+    <li>	Physical View Diagram <a name="physC"></a> 
 Element	Description
  	Box to describe devices, servers, databases, and platforms
                          	Pointer to link boxes
@@ -170,25 +176,34 @@ Element	Description
  	Represents the Web Application
  	Represents the devices used to access the application
  	Represents Google’s SQL Cloud Platform
-    3.	Development View Diagram<a name="developC"></a> 
+    </li>
+    <li>	Development View Diagram<a name="developC"></a> 
 Element	Description
 folder	A directory/file
  	Contains relationship
-    4.	User Interface Diagram <a name="userC"></a> 
+    </li>
+    <li>	User Interface Diagram <a name="userC"></a> 
 Element	Description
              	Actor/User of the web application
                     	Action pointer 
             	Class to describe each UI
-    5.	Database Diagram <a name="databaseC"></a> 
+    </li>
+    <li>	Database Diagram <a name="databaseC"></a> 
 Element	Description
  	Boxes indicates data tables
 Bolded Underlined Words	Indicates primary keys
  	Arrows to indicate relationship between primary and foreign keys
-10.	User Interfaces <a name="UI"></a> 
-    1.	User Interface Description <a name="UIDes"></a> 
-	When the user visits our web domain they will be presented with the main webpage. 
-They would have the option of logging into their already made account, sign up for a new account, or continue as a guest with certain features unavailable. If the user has to sign up, they would be asked to create a username, password, and verify their password. If the user logs in, they would be prompted to enter their username and password. Logging into their account gives them the ability to like or dislike videos and submit videos as well as challenge ideas.  If the user continues as guest, they would be limited on the amount of features available to them. They would only be able to browse the site.
-    2. 	User Interface Diagram <a name="UIdia"></a> 
+     </li>
+</ol>
+</li>
+<li>	User Interfaces <a name="UI"></a>
+<ol>
+    <li>	User Interface Description <a name="UIDes"></a> 
+	<p>When the user visits our web domain they will be presented with the main webpage. 
+They would have the option of logging into their already made account, sign up for a new account, or continue as a guest with certain features unavailable. If the user has to sign up, they would be asked to create a username, password, and verify their password. If the user logs in, they would be prompted to enter their username and password. Logging into their account gives them the ability to like or dislike videos and submit videos as well as challenge ideas.  If the user continues as guest, they would be limited on the amount of features available to them. They would only be able to browse the site.</p></li>
+    2. 	User Interface Diagram <a name="UIdia"></a>
+</ol>
+</li>
 </ol> 
 	
 
