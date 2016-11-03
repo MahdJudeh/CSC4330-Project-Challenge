@@ -14,12 +14,10 @@ Table of Contents
   2. Scope of the Development Project
   3. References 
   4. Overview of Document
-  
 2. Main System Architecture (Logical View)	
   1. Overview of Modules/Components	
   2. Structure and Relationships	
   3. User Interface Issues
-  
 3. Sub-systems Architecture	
   1. Database
   2. Web-application
@@ -29,29 +27,22 @@ Table of Contents
   6. Vote
   7. Delete
   8. Account
-  
 4. Rationale for each Architectural Choice
-
-5. Development View
-
+5. Development View 
 6. Physical View
-
 7. Database View
-
 8. Work-assignment View
-
 9. Element Catalog
   1. Logical View Diagram
   2. Physical View Diagram
   3. Development View Diagram
   4. Work-Assignment View Diagram
   5. User Interface Diagram
-  6. Database Diagram
-
+  6. Database Diagram 
 10. User Interfaces
   1. User Interface Description
   2. User Interface Diagram
-  
+====================================================================================================================    
 
 
 
