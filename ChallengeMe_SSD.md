@@ -8,45 +8,53 @@
 =====================================================================================================
 # **Table of Contents**
 Table of Contents	
-[Revision History](#Revision)	
-<li> [Introduction](#intro)</li>
-   <li> [Purpose of this Document](#purpose)</li>
-   <li> [Scope of the Development Project](#scope)</li>
-   <li> [References](#references)</li>
-   <li> [Overview of Document](#docOverview)</li>
-</li>
-<li> [Main System Architecture (Logical View)](#mainSys)</li>	
+[Revision History](#Revision)
+<ol>
+	<li> [Introduction](#intro)
+	   <li> [Purpose of this Document](#purpose)</li>
+	   <li> [Scope of the Development Project](#scope)</li>
+	   <li> [References](#references)</li>
+	   <li> [Overview of Document](#docOverview)</li>
+	</li>
+<li> [Main System Architecture (Logical View)](#mainSys)
    <li> [Overview of Modules/Components](#compOverview)</li>
    <li> [Structure and Relationships](#stuctureR)</li>	
    <li> [User Interface Issues](#userII)</li>
 </li>
-<li> [Sub-systems Architecture](#subSys)</li>	
-   <li> [Database](#database)</li>
-   <li> [Web-application-data](#webdata)</li>
-   <li> [Update Database](#updateD)</li>
-   <li> [Update View](#updateV)</li>
-   <li> [Submit](#submit)</li>
-   <li> [Vote](#vote)</li>
-   <li> [Delete](#delete)</li>
-   <li> [Account](#account)</li>
+<li> [Sub-systems Architecture](#subSys)	
+   <ol>
+   	<li> [Database](#database)</li>
+   	<li> [Web-application-data](#webdata)</li>
+   	<li> [Update Database](#updateD)</li>
+  	<li> [Update View](#updateV)</li>
+   	<li> [Submit](#submit)</li>
+   	<li> [Vote](#vote)</li>
+   	<li> [Delete](#delete)</li>
+   	<li> [Account](#account)</li>
+   </ol>
 </li>
 <li> [Rationale for each Architectural Choice](#rationale)</li>
 <li> [Development View](#delevopView)</li>
 <li> [Physical View](#physView)</li>
 <li> [Database View](databaseView)</li>
 <li> [Work-assignment View](#workView)</li>
-<li> [Element Catalog](#elementcatolog)</li>
-   <li> [Logical View Diagram](#logicalC)</li>
-   <li> [Physical View Diagram](#physC)</li>
-   <li> [Development View Diagram](#developC)</li>
-   <li> [Work-Assignment View Diagram](#workC)</li>
-   <li> [User Interface Diagram](#userC)</li>
-   <li> [Database Diagram](#databaseC)</li>
+<li> [Element Catalog](#elementcatolog)
+    <ol>
+	<li> [Logical View Diagram](#logicalC)</li>
+   	<li> [Physical View Diagram](#physC)</li>
+   	<li> [Development View Diagram](#developC)</li>
+   	<li> [Work-Assignment View Diagram](#workC)</li>
+   	<li> [User Interface Diagram](#userC)</li>
+   	<li> [Database Diagram](#databaseC)</li>
+   </ol>
 </li>
 <li> [User Interfaces](#UI)
-    <li> [User Interface Description](#UIDes)</li>
-    <li> [User Interface Diagram](#UIDia)</li>
+    <ol>
+    	<li> [User Interface Description](#UIDes)</li>
+    	<li> [User Interface Diagram](#UIDia)</li>
+    </ol>
 </li>
+</ol>
 ====================================================================================================================    
 
 
