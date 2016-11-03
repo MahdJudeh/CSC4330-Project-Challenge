@@ -19,39 +19,38 @@
 Table of Contents	
 [Revision History](#Revision)	
 1.	Introduction	
-    1.	Purpose	 of this Document
-    2.	Scope of the Development Project
-    3.	References 
-    4.	Overview of Document	
+    * 1.1	Purpose	 of this Document
+    * 1.2	Scope of the Development Project
+    * 1.3	References 
+    * 1.4	Overview of Document	
 2.	Main System Architecture (Logical View)	
-    1.	Overview of Modules/Components	
-    2.	Structure and Relationships	
-    3.	User Interface Issues	
+    * 2.1	Overview of Modules/Components	
+    * 2.2	Structure and Relationships	
+    * 2.3	User Interface Issues	
 3.	Sub-systems Architecture	
-    1.	Database
-    2.	Web-application
-    3.	Update Database	
-    4.	Update View
-    5.   Submit
-    6.   Vote
-    7.   Delete
-    8.   Account	
+    * 3.1	Database
+    * 3.2	Web-application
+    * 3.3	Update Database	
+    * 3.4	Update View
+    * 3.5	Submit
+    * 3.6	Vote
+    * 3.7       Delete
+    * 3.8   Account	
 4.	Rationale for each Architectural Choice	
 5.	Development View	
 6.	Physical View
 7.  Database View
 8.  Work-assignment View
 9.  Element Catalog
-    1.   Logical View Diagram
-    2.   Physical View Diagram
-    3.   Development View Diagram
-    4.   Work-Assignment View Diagram
-    5.   User Interface Diagram
-    6.   Database Diagram
-
+    * 9.1   	Logical View Diagram
+    * 9.2   	Physical View Diagram
+    * 9.3   	Development View Diagram
+    * 9.4   	Work-Assignment View Diagram
+    * 9.5   	User Interface Diagram
+    * 9.6	Database Diagram
 10. User Interfaces
-    1.   User Interface Description
-    2.   User Interface Diagram
+    * 10.1      User Interface Description
+    * 10.3      User Interface Diagram
   
 
 
@@ -68,18 +67,15 @@ Table of Contents
 | Alex Pagan	| 11/2/16	| Wrote parts of catalog |	0.6 |
 
 
-
+=================================================================================================================
 1.	Introduction
 1.	Purpose of this Document
 The purpose of this document is to describe the implementation of the ChallengeMe! website based on the description of the site given by the software requirements specification(SRS) document. Its main purpose is to provide a framework for the classes and functions that we may need.
 2.	Scope
 ChallengeMe is a website that allows users to vote on, participate in, and submit challenges. Challenge Me aims to provide users with a medium to show off their skills and talents to their friends and people around the world. The website will frequently update with user-submitted challenges and developer submitted challenges in order to constantly supply users with challenges to watch and participate in.
 3.	References 
-
-	IEEE Standard 1016 : Software design Specification https://www.ieee.org/ 
-
-  ChallengeMe! Software Requirements Specifications Document
-	
+IEEE Standard 1016 : Software design Specification https://www.ieee.org/ 
+ChallengeMe! Software Requirements Specifications Document	
 4.	Overview of Document
 1. Introduction: Gives a brief introduction to the project including its purpose,scope, references and overview of the total document. 
 2. Main System Architecture: Gives a view of the design of the main system, \subsystems, and how they relate in the case of the final product. 
@@ -91,11 +87,9 @@ ChallengeMe is a website that allows users to vote on, participate in, and submi
 8. Work Assignment View: This section presents each major task in the application and which developers have been tasked with completing it.
 9. Element Catalog: This section is a reference for all symbols used within the document. 
 10. User Interface: This section visually represents and describes each important aspect in the design of the graphical user interface. 
-
-2.	Main System Architecture
-
-1.	Complete System Overview
-
+======================================================================================================================================
+## 2.	Main System Architecture
+* 2.1	Complete System Overview
 1.	Overview
 ChallengeMe! is a project which at its center desires to be a location for users to participate in challenges and submit challenges for others to complete in an internet community. It is intended to be simple to navigate and have a user interface that does not require over 10 minutes to learn. The website will provide a view of all of the available challenges and allow users to sort between challenges based on their popularity, newness, or trendiness. The user can click on a challenge to view it. The user can sign up to gain the ability to vote on challenges and submit challenges, as well as vote on videos and submit videos. Once logged in, the user will have the previously mentioned features as well the ability to logout and view their account information. If the user sees an illegal post that user can report that challenge/video. Moderator users should be able to purge posts with a click and the system should remove the post from a database. The user will also have the option to compare their total points against other users to check their ranking.
 
