@@ -38,7 +38,7 @@ Table of Contents
   3. Development View Diagram
   4. Work-Assignment View Diagram
   5. User Interface Diagram
-  6. Database Diagram 
+  6. Database Diagram
 10. User Interfaces
   1. User Interface Description
   2. User Interface Diagram
