@@ -136,16 +136,16 @@ ChallengeMe! Software Requirements Specifications Document</p>
     <li>	Submit
     <p>This subsystem is responsible for all the submits sent from the view to the controller requesting an update/action. This will include the classes for submitting challenges, submitting videos.</p></li>
     <li>	Vote
-<p>This subsystem is part of the view and it is responsible for locally incrementing the vote values and letting the controller know that changes have occurred in the view that require changes in the database.</p><li>
+<p>This subsystem is part of the view and it is responsible for locally incrementing the vote values and letting the controller know that changes have occurred in the view that require changes in the database.</p></li>
     <li>	Delete
-<p>This subsystem is part of the view and it is responsible for removing challenges, users, and videos. Once a user completes a delete action the view will let the database</p><li> 
+<p>This subsystem is part of the view and it is responsible for removing challenges, users, and videos. Once a user completes a delete action the view will let the database</p></li> 
     <li>	Account
-    <p>Part of the view and is responsible for allowing users to signup, login, and logout. Once a user makes any of these actions inform the controller that the user’s account information needs to be saved or verified depending on the action that is taken.</p><li>
+    <p>Part of the view and is responsible for allowing users to signup, login, and logout. Once a user makes any of these actions inform the controller that the user’s account information needs to be saved or verified depending on the action that is taken.</p></li>
 </ol>
 </li>
 <li>	Rationale for each Architectural Choice <a name="rationale"></a> 
 <p>The reason we picked a model-view-controller architecture is because our system is not complex and this system describes it efficiently. Our web application would be a semi dynamic website. At any point in time if multiple users all arrive to a site at the exact same moment they will all see the same web page. If a any of these users vote or submit a challenge then the web page will update for any user who now makes a request for our webpage.</p></li>
-</li>	Development View <a name="developView"></a> </li>
+<li>	Development View <a name="developView"></a> </li>
 <li>	Physical View <a name="physView"></a> > 
 <p>The ChallengeMe! website is presented to the user through the use of personal devices such as computers, smart phones, and tablets. The website also utilizes a database containing user, challenge, and video information in order to present it to the user. The website’s database will make use of Google’s Cloud SQL Platform for hosting purposes.</p><li>
 <li>	Database View <a name="databaseView"></a> 
