@@ -9,39 +9,44 @@
 # **Table of Contents**
 Table of Contents	
 [Revision History](#Revision)	
-1. [Introduction](#intro)	
-   1. [Purpose of this Document](#purpose)
-   2. [Scope of the Development Project](#scope)
-   3. [References](#references)
-   4. [Overview of Document](#docOverview)
-2. [Main System Architecture (Logical View)](#mainSys)	
-   1. [Overview of Modules/Components](#compOverview)	
-   2. [Structure and Relationships](#stuctureR)	
-   3. [User Interface Issues](#userII)
-3. [Sub-systems Architecture](#subSys)	
-   1. [Database](#database)
-   2. [Web-application-data](#webdata)
-   3. [Update Database](#updateD)	
-   4. [Update View](#updateV)
-   5. [Submit](#submit)
-   6. [Vote](#vote)
-   7. [Delete](#delete)
-   8. [Account](#account)
-4. [Rationale for each Architectural Choice](#rationale)
-5. [Development View](#delevopView)
-6. [Physical View](#physView)
-7. [Database View](databaseView)
-8. [Work-assignment View](#workView)
-9. [Element Catalog](#elementcatolog)
-   1. [Logical View Diagram](#logicalC)
-   2. [Physical View Diagram](#physC)
-   3. [Development View Diagram](#developC)
-   4. [Work-Assignment View Diagram](#workC)
-   5. [User Interface Diagram](#userC)
-   6. [Database Diagram](#databaseC)
-10. [User Interfaces](#UI)
-    1. [User Interface Description](#UIDes)
-    2. [User Interface Diagram](#UIDia)
+<li> [Introduction](#intro)</li>
+   <li> [Purpose of this Document](#purpose)</li>
+   <li> [Scope of the Development Project](#scope)</li>
+   <li> [References](#references)</li>
+   <li> [Overview of Document](#docOverview)</li>
+</li>
+<li> [Main System Architecture (Logical View)](#mainSys)</li>	
+   <li> [Overview of Modules/Components](#compOverview)</li>
+   <li> [Structure and Relationships](#stuctureR)</li>	
+   <li> [User Interface Issues](#userII)</li>
+</li>
+<li> [Sub-systems Architecture](#subSys)</li>	
+   <li> [Database](#database)</li>
+   <li> [Web-application-data](#webdata)</li>
+   <li> [Update Database](#updateD)</li>
+   <li> [Update View](#updateV)</li>
+   <li> [Submit](#submit)</li>
+   <li> [Vote](#vote)</li>
+   <li> [Delete](#delete)</li>
+   <li> [Account](#account)</li>
+</li>
+<li> [Rationale for each Architectural Choice](#rationale)</li>
+<li> [Development View](#delevopView)</li>
+<li> [Physical View](#physView)</li>
+<li> [Database View](databaseView)</li>
+<li> [Work-assignment View](#workView)</li>
+<li> [Element Catalog](#elementcatolog)</li>
+   <li> [Logical View Diagram](#logicalC)</li>
+   <li> [Physical View Diagram](#physC)</li>
+   <li> [Development View Diagram](#developC)</li>
+   <li> [Work-Assignment View Diagram](#workC)</li>
+   <li> [User Interface Diagram](#userC)</li>
+   <li> [Database Diagram](#databaseC)</li>
+</li>
+<li> [User Interfaces](#UI)
+    <li> [User Interface Description](#UIDes)</li>
+    <li> [User Interface Diagram](#UIDia)</li>
+</li>
 ====================================================================================================================    
 
 
