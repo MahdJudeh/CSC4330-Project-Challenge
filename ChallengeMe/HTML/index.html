@@ -10,10 +10,12 @@
 </head>
 <body>
 
+<!-- This is the header -->
   <div class="header">
     <h1>Challenge Me</h1>
   </div>
 
+<!-- This is the navigation bar -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -37,6 +39,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- This is the modal for the login -->
   <div class="modal fade" id="loginModal" tabindex="-1da" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -45,14 +49,44 @@
           <h2 class="modal-title text-center">Login</h2>
         </div>
         <div class="modal-body">
-          <div class="form-group">
-            <label for="emailBoxLogin">Email address</label>
-            <input type="email" class="form-control" id="emailBoxLogin" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="passwordLogin">Password</label>
-            <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password">
-          </div>
+          <form action="action_page.php">
+            <div class="form-group">
+                <label for="emailBoxLogin">Email address</label>
+                <input type="email" class="form-control" id="emailBoxLogin" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="passwordLogin">Password</label>
+              <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the modal for the signup -->
+  <div class="modal fade" id="loginModal" tabindex="-1da" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title text-center">Login</h2>
+        </div>
+        <div class="modal-body">
+          <form action="action_page.php">
+            <div class="form-group">
+                <label for="emailBoxLogin">Email address</label>
+                <input type="email" class="form-control" id="emailBoxLogin" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="passwordLogin">Password</label>
+              <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password" required>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary">Login</button>
