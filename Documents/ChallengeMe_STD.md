@@ -46,16 +46,10 @@ TC1 Video Scrolling……………………………………………………�
 | 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. | ----- | ----- | 
 
 <br>
-| Test Case #: 1.2    <br>                                      
-Test Case Name: Video Scrolling        <br>  
-System: Website     <br>    
-Subsystem: Home Page <br>
-Designed by: Harry Ly      <br>
-Design Date: **11/21/16** Executed by:     <br>
-Execution Date: <br>
+| Test Case #: 1.2    <br>                                      Test Case Name: Video Scrolling        <br>  System: Website     <br>   Subsystem: Home Page <br> Designed by: Harry Ly      <br>Design Date: **11/21/16** Executed by:     <br>Execution Date: <br>
 Short Description: Reached the end of the video list |
 | --- |
-| Pre-conditions |
+| **Pre-conditions** |
 |The user needs access to the internetThe user has to be on the website |
 
 | **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** |
