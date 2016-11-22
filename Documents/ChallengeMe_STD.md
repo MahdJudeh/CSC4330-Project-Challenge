@@ -60,8 +60,6 @@ TC1 Video Scrolling……………………………………………………�
 | --- |
 | 1. The number of upvotes on the video increases by one. |
 
-
-<br>
 | Test Case #: 2.2     <br>Test Case Name: Voting on Challenge <br> System:  Website <br>Subsystem: Home Page<br>Designed by: Harry Ly <br>Design Date: 11/21/16 <br>Executed by:<br>Execution Date: <br>Short Description: Downvoting for challenges | 
 | --- |
 | Pre-conditions | 
@@ -95,8 +93,6 @@ TC1 Video Scrolling……………………………………………………�
 | Pre-conditions |
 | The user needs access to the internet | 
 | The user must be on the website |
-| --- |
-
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
