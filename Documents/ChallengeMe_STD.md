@@ -66,7 +66,8 @@ TC1 Video Scrolling……………………………………………………�
 | --- |
 | Pre-conditions | 
 | The user needs access to the internet | 
-| The user has to be logged into the website on their unique account | 
+| The user has to be logged into the website on their unique account |
+| --- |
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
