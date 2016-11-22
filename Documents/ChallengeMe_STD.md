@@ -57,8 +57,8 @@ TC1 Video Scrolling……………………………………………………�
 | 1 | Click upvote button | The system adds one to the total amount of upvotes that the video already has. |   |   |
 
 | Post-conditions |
-| 1. The number of upvotes on the video increases by one. |
 | --- |
+| 1. The number of upvotes on the video increases by one. |
 
 
 <br>
