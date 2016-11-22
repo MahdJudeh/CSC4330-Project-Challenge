@@ -12,18 +12,6 @@
 
 **November 21, 2016**
 
-
-
-
-
-
-
-
-
-
-
-
-
 **Table of Contents**
 
 Cover…………………………………………………………………………………………
@@ -45,19 +33,19 @@ TC1 Video Scrolling……………………………………………………�
 | --- | --- | --- | --- | --- |
 | 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. | ----- | ----- | 
 
-| Test Case #: 1.2    <br>                                      Test Case Name: Video Scrolling        <br>  System: Website     <br>   Subsystem: Home Page <br> Designed by: Harry Ly      <br>Design Date: **11/21/16** Executed by:     <br>Execution Date: <br>
+| Test Case #: 1.2    <br>                                      Test Case Name: Video Scrolling        <br>  System: Website     <br>   Subsystem: Home Page <br> Designed by: Harry Ly      <br>Design Date: **11/21/16** Executed by:     <br> Execution Date: <br>
 Short Description: Reached the end of the video list |
-| --- |
-| **Pre-conditions** |
-|The user needs access to the internetThe user has to be on the website |
+| --- | 
+| **Pre-conditions** | 
+|The user needs access to the internetThe user has to be on the website | 
+ 
+| **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** | 
+| --- | --- | --- | --- | --- | 
+| 1 | Click on next video | The system displays a message saying there are no more videos  | -----  | ----- | 
 
-| **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** |
-| --- | --- | --- | --- | --- |
-| 1 | Click on next video | The system displays a message saying there are no more videos  | -----  | ----- |
-
-| **Post-conditions** |
-| --- |
-| 1. The same video is displayed on the screen with a message saying there are no more videos. |
+| **Post-conditions** | 
+| --- | 
+| 1. The same video is displayed on the screen with a message saying there are no more videos. | 
 
 | Test Case #: 2.1 <br>
 Test Case Name: Voting on Challenge <br>
