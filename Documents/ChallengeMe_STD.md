@@ -46,54 +46,6 @@ TC1 Video Scrolling……………………………………………………�
 | --- | 
 | 1. The same video is displayed on the screen with a message saying there are no more videos. | 
 
-# Software Testing Document
-
-### for
-
-# ChallengeMe!
-
-**Version 1.0 approved**
-
-**Prepared by Benjamin Bordelon, Mahdi Judeh,                                              Harry Ly, Alex Pagan, Blake Roussel**
-
-**LSU**
-
-**November 21, 2016**
-
-**Table of Contents**
-
-Cover…………………………………………………………………………………………
-
-Table of Contents……………………………………………………………………………
-
-TC1 Video Scrolling…………………………………………………………………………
-
-
-
-
-| Test Case #:    1.1  <br>                                       Test Case Name: Video  Scrolling     <br>                  System: Website    <br>                                    Subsystem: Home Page <br> Designed by: Harry Ly <br> Design Date: 11/21/16 <br> Executed by:                 <br>                            Execution Date: <br> Short Description: Moving to the next video in the website | 
-| --- | 
-| **Pre-conditions** | 
-| The user needs access to the internet | 
-| The user has to be on the website |
-
-| **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** |
-| --- | --- | --- | --- | --- |
-| 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. | ----- | ----- | 
-
-| Test Case #: 1.2    <br>                                      Test Case Name: Video Scrolling        <br>  System: Website     <br>   Subsystem: Home Page <br> Designed by: Harry Ly      <br>Design Date: **11/21/16** Executed by:     <br> Execution Date: <br> Short Description: Reached the end of the video list |
-| --- | 
-| **Pre-conditions** | 
-|The user needs access to the internetThe user has to be on the website | 
- 
-| **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** | 
-| --- | --- | --- | --- | --- | 
-| 1 | Click on next video | The system displays a message saying there are no more videos  | ----- | ----- | 
-
-| **Post-conditions** | 
-| --- | 
-| 1. The same video is displayed on the screen with a message saying there are no more videos. | 
-
 | Test Case #: 2.1 <br> Test Case Name: Voting on Challenge <br> System: Website <br>Subsystem: Home Page <br>Designed by: Harry Ly <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date:  <br>Short Description: Upvoting for challenges |
 | --- |
 | Pre-conditions |
@@ -115,17 +67,10 @@ TC1 Video Scrolling……………………………………………………�
 | Pre-conditions | 
 | The user needs access to the internet |
 | The user has to be logged into the website on their unique account |
-| --- |
-
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
 | 1 | Click downvote button | The system decrements the vote amount the video already has. The system displays the voters decremented by 1. |   |   |
-
-
-
-
-
 
 | Test Case #: 3.1 <br>Test Case Name: Display Video <br>System: Website <br>Subsystem: Home Page <br>Designed by: Harry Ly <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description: Using YouTube to display videos on the website |
 | --- |
@@ -195,7 +140,6 @@ TC1 Video Scrolling……………………………………………………�
 | The user must be logged in(not a guest). |
 | The user must have a challenge opened. |
 | The user must have a valid YouTube link to submit(ex. www.YouTube.com/h3ds7). |
-| --- |
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
@@ -210,12 +154,11 @@ TC1 Video Scrolling……………………………………………………�
 <br>
 | Test Case #: 7.2 <br>Test Case Name: Entering a Video Submission(guest user) <br>System: Website <br>Subsystem: Challenges <br>Designed by: Ben Bordelon <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description: Submitting a video with a guest user. |
 | --- |
-
 | Pre-conditions |
 | The user needs access to the internet. | 
 | The user must be logged in(not a guest). | 
 | The user must have a challenge opened. |
-| --- |
+
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
