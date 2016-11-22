@@ -35,15 +35,13 @@ TC1 Video Scrolling……………………………………………………�
 
 
 
-|Test Case #:    1.1  <br>                                       Test Case Name: Video  Scrolling     <br>                  System: Website    <br>                                    Subsystem: Home Page <br> Designed by: Harry Ly <br> Design Date: 11/21/16 <br> Executed by:                 <br>                            Execution Date: <br> Description: Moving to the next video in the website |
-| --- |
-| **Pre-conditions** |
-| The user needs access to the internet |
-| The user has to be on the website |
-
+|Test Case #:    1.1  <br>                                       Test Case Name: Video  Scrolling     <br>                  System: Website    <br>                                    Subsystem: Home Page <br> Designed by: Harry Ly <br> Design Date: 11/21/16 <br> Executed by:                 <br>                            Execution Date: <br> Description: Moving to the next video in the website | | | | |
+| --- | | | | |
+| **Pre-conditions** | | | | |
+| The user needs access to the internet | | | | |
+| The user has to be on the website | | | | |
 | **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** |
-| --- | --- | --- | --- | --- |
-| 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. |
+| 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. | | |
 
 | **Test Case #:** 1.2 **                                        Test Case Name:** Video Scrolling **                       **** System: **Website**                                        Subsystem: **Home Page** Designed by: **Harry Ly**                              Design Date: **11/21/16** Executed by:                                             Execution Date: ****Short Description:** Reached the end of the video list |
 | --- |
