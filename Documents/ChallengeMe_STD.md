@@ -62,11 +62,11 @@ TC1 Video Scrolling……………………………………………………�
 
 
 <br>
-| Test Case #: 2.2     <br>Test Case Name: Voting on Challenge <br> System:  Website <br>Subsystem: Home Page<br>Designed by: Harry Ly <br>Design Date: 11/21/16 <br>Executed by:<br>Execution Date: <br>Short Description: Downvoting for challenges |
+| Test Case #: 2.2     <br>Test Case Name: Voting on Challenge <br> System:  Website <br>Subsystem: Home Page<br>Designed by: Harry Ly <br>Design Date: 11/21/16 <br>Executed by:<br>Execution Date: <br>Short Description: Downvoting for challenges | 
 | --- |
 | Pre-conditions | 
-| The user needs access to the internet |
-| The user has to be logged into the website on their unique account |
+| The user needs access to the internet | 
+| The user has to be logged into the website on their unique account | 
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
