@@ -41,7 +41,7 @@ Short Description: Reached the end of the video list |
  
 | **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** | 
 | --- | --- | --- | --- | --- | 
-| 1 | Click on next video | The system displays a message saying there are no more videos  | -----  | ----- | 
+| 1 | Click on next video | The system displays a message saying there are no more videos  | ----- | ----- | 
 
 | **Post-conditions** | 
 | --- | 
