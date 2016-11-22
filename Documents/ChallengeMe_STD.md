@@ -35,7 +35,7 @@ TC1 Video Scrolling……………………………………………………�
 
 
 
-|Test Case #:    1.1  <br>                                       Test Case Name: Video  Scrolling     <br>                  System: Website    <br>                                    Subsystem: Home Page <br> Designed by: Harry Ly <br> Design Date: 11/21/16 <br> Executed by:                 <br>                            Execution Date: <br> Short Description: Moving to the next video in the website | 
+| Test Case #:    1.1  <br>                                       Test Case Name: Video  Scrolling     <br>                  System: Website    <br>                                    Subsystem: Home Page <br> Designed by: Harry Ly <br> Design Date: 11/21/16 <br> Executed by:                 <br>                            Execution Date: <br> Short Description: Moving to the next video in the website | 
 | --- | 
 | **Pre-conditions** | 
 | The user needs access to the internet | 
