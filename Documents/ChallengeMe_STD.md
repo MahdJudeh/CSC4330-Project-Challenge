@@ -57,7 +57,7 @@ Short Description: Reached the end of the video list |
 | --- |
 | Pre-conditions |
 |The user needs access to the internetThe user has to be on the website |
-| --- |
+
 | **Step** | **Action** | **Expected System Response** | **Pass/Fail** | **Comment** |
 | --- | --- | --- | --- | --- |
 | 1 | Click on next video | The system displays a message saying there are no more videos  | -----  | ----- |
@@ -82,13 +82,10 @@ Short Description: Upvoting for challenges |
 | Pre-conditions |
 | The user needs access to the internet |
 | The user has to be logged into the website on their unique account |
-| --- |
-
 
 | Step | Action | Expected System Response | Pass/Fail | Comment |
 | --- | --- | --- | --- | --- |
 | 1 | Click upvote button | The system adds one to the total amount of upvotes that the video already has. |   |   |
-
 
 | Post-conditions |
 | 1. The number of upvotes on the video increases by one. |
@@ -96,8 +93,6 @@ Short Description: Upvoting for challenges |
 
 
 <br>
-
-
 | Test Case #: 2.2     <br>
 Test Case Name: Voting on Challenge <br> 
 System:  Website <br>
