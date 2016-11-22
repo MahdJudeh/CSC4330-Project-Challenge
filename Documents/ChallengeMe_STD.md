@@ -20,6 +20,33 @@ Table of Contents………………………………………………………
 
 TC1 Video Scrolling…………………………………………………………………………
 
+TC2 Voting On Challenge…………………………………………………………………………
+
+TC3 Display Video…………………………………………………………………………
+
+TC4 Top Challenges tab…………………………………………………………………………
+
+TC5 Newest Challenges tab…………………………………………………………………………
+
+TC6 Hot Challenges tab…………………………………………………………………………
+
+TC7 Entering a Video Submission…………………………………………………………………………
+
+TC8 Entering a Challenge Submission…………………………………………………………………………
+
+TC9 Create a New User…………………………………………………………………………
+
+TC10 Logout…………………………………………………………………………
+
+TC11 User viewing Account Information …………………………………………………………………………
+
+TC12 Prompt Login…………………………………………………………………………
+
+TC13 Report Challenge…………………………………………………………………………
+
+TC14 Remove Video…………………………………………………………………………
+
+
 
 
 
@@ -271,23 +298,7 @@ TC1 Video Scrolling……………………………………………………�
 | --- |
 | User is now considered a guest user. |
 
-| Test Case #: 11.1 <br>Test Case Name: Entering a Challenge Submission(Logged in) <br>System: Website <br>Subsystem: Challenge Page <br>Designed by: Blake Roussel <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description: Submitting a challenge by a logged in user. |
-| --- |
-| Pre-conditions: |
-| The user needs access to the internet. |
-| The user must be logged in(not a guest). |
-
-| Step | Action | Expected System Response | Pass/Fail | Comment |
-| --- | --- | --- | --- | --- |
-| 1 | Click the &quot;Challenge other players!&quot; button | Submission pop-up window comes up asking for challenge title, description |   |   |
-| 2 | Enter challenge title, description and click submit. | System confirms challenge submission, enters challenge into database. |   |   |
-
-
-| Post-conditions |
-| --- |
-| 1. A challenge object with the correct title and description is created and stored in database. |
-
-| Test Case #: 12.1 <br>Test Case Name: User Viewing Account Information <br>System: Website <br>Subsystem: Account <br>Designed by: Blake Roussel <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description: User can view his own account information(total points, video submissions) |
+| Test Case #: 11.1 <br>Test Case Name: User Viewing Account Information <br>System: Website <br>Subsystem: Account <br>Designed by: Blake Roussel <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description: User can view his own account information(total points, video submissions) |
 | --- |
 
 
@@ -301,7 +312,7 @@ TC1 Video Scrolling……………………………………………………�
 | --- | --- | --- | --- | --- |
 | 1 | Click the &quot;My Account&quot; button | The system gets information about the unique account from the database and displays in a pop up window. |   |   |
 
-| Test Case #:   13.1 <br>Test Case Name: Prompt Login (Username) <br>System:  Website <br>Subsystem:  Login <br>Designed by: Blake Roussel <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description:  The system should allow users to log in to their accounts. |
+| Test Case #:   12.1 <br>Test Case Name: Prompt Login (Username) <br>System:  Website <br>Subsystem:  Login <br>Designed by: Blake Roussel <br>Design Date: 11/21/16 <br>Executed by: <br>Execution Date: <br>Short Description:  The system should allow users to log in to their accounts. |
 | --- |
 | Pre-conditions |
 | User visits site and has an account |
@@ -311,7 +322,7 @@ TC1 Video Scrolling……………………………………………………�
 | 1 | User click &quot;login&quot; Button. | Prompts user for login information. |   |   |
 | 2 | User types an existent username with incorrect password. | System checks given information with database and system responds with &quot;Incorrect login information&quot; message. |   |   |
 
-| Test Case #: 13.2  <br>                             Test Case Name: Prompt Login (Password)  <br>          System: ChallengeMe             <br>                 Subsystem: Login <br>Designed by: Blake Roussel      <br>                Design Date: 11/21/16 <br>Executed by:                 <br>                            Execution Date: <br>Short Description:  The system should allow users to log in to their accounts or create accounts to gain access to voting and submission and to user account info. |
+| Test Case #: 12.2  <br>                             Test Case Name: Prompt Login (Password)  <br>          System: ChallengeMe             <br>                 Subsystem: Login <br>Designed by: Blake Roussel      <br>                Design Date: 11/21/16 <br>Executed by:                 <br>                            Execution Date: <br>Short Description:  The system should allow users to log in to their accounts or create accounts to gain access to voting and submission and to user account info. |
 | --- |
 | Pre-conditions |
 | User visits site and has an account |
@@ -321,7 +332,7 @@ TC1 Video Scrolling……………………………………………………�
 | 1 | User click &quot;login&quot; Button. | Prompts user for login information. |   |   |
 | 2 | User types a non-existent username. | System checks given information with database and system responds with &quot;User does not exist&quot; message. |   |   |
 
-| Test Case #: 14.1   <br>                              Test Case Name:  Report challenge      <br>                        System:   Challenge Me     <br>                                   Subsystem: Challenge <br>Designed by:   Blake Roussel     <br>             Design Date: 11/21/16 <br>Executed by:    <br>                                         Execution Date: <br>Short Description: User can report challenges that do not meet guidelines. |
+| Test Case #: 13.1   <br>                              Test Case Name:  Report challenge      <br>                        System:   Challenge Me     <br>                                   Subsystem: Challenge <br>Designed by:   Blake Roussel     <br>             Design Date: 11/21/16 <br>Executed by:    <br>                                         Execution Date: <br>Short Description: User can report challenges that do not meet guidelines. |
 | --- |
 | Pre-conditions | 
 | User is logged in and voting on a Challenge |
@@ -334,7 +345,7 @@ TC1 Video Scrolling……………………………………………………�
 | --- |
 | 1. User continues to review challenges. |
 
-| Test Case #: 15.1 <br>                                Test Case Name:  Remove video. <br>               System: ChallengeMe  <br>                          Subsystem: User stats. <br>Designed by: Blake Roussel  <br>                 Design Date: 11/21/16 <br>Executed by:    <br>                                         Execution Date: <br>Short Description:  The system should allow users to remove videos after they submit it. |
+| Test Case #: 14.1 <br>                                Test Case Name:  Remove video. <br>               System: ChallengeMe  <br>                          Subsystem: User stats. <br>Designed by: Blake Roussel  <br>                 Design Date: 11/21/16 <br>Executed by:    <br>                                         Execution Date: <br>Short Description:  The system should allow users to remove videos after they submit it. |
 | --- |
 | Pre-conditions |
 | User is logged in and is viewing their video submissions. |
