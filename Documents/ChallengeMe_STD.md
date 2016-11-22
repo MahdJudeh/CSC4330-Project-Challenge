@@ -45,7 +45,6 @@ TC1 Video Scrolling……………………………………………………�
 | --- | --- | --- | --- | --- |
 | 1 | Click on &quot;next&quot; video button | The system displays the next video in the challenge playlist. | ----- | ----- | 
 
-<br>
 | Test Case #: 1.2    <br>                                      Test Case Name: Video Scrolling        <br>  System: Website     <br>   Subsystem: Home Page <br> Designed by: Harry Ly      <br>Design Date: **11/21/16** Executed by:     <br>Execution Date: <br>
 Short Description: Reached the end of the video list |
 | --- |
@@ -59,9 +58,6 @@ Short Description: Reached the end of the video list |
 | **Post-conditions** |
 | --- |
 | 1. The same video is displayed on the screen with a message saying there are no more videos. |
-
-
-<br>
 
 | Test Case #: 2.1 <br>
 Test Case Name: Voting on Challenge <br>
