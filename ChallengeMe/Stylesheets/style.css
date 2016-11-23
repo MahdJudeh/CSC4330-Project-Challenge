@@ -1,5 +1,5 @@
 html body{
-  background-color: #C0C0C0;
+  background-color: #233040;
 }
 
 .header {
@@ -8,6 +8,9 @@ html body{
 .header h1{
     font-size: 5.0em;
     font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    text-shadow: 2px 3px #515151;
+    color: #ffffff;
 }
 .nav li a{
   font-size: 2.0em;
@@ -16,4 +19,12 @@ html body{
   float:none;
   display: inline-block;
   vertical-align: top;
+}
+.modal-header, .modal-body, .modal-footer{
+  background-color: #47607f;
+  border-color: #47607f
+}
+.modal-header{
+  color: #2b2b2b;
+  font-weight: bold;
 }

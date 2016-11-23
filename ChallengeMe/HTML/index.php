@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>ChallengeMe</title>
-	<link href="../Stylesheets/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="../Stylesheets/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -34,7 +34,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a class="login text-right" href="#0" data-toggle="modal" data-target="#loginModal">LOGIN</a></li>
-		      <li><a class="signup text-right" href="#0">SIGNUP</a></li>
+		      <li><a class="signup text-right" href="#0" data-toggle="modal" data-target="#signupModal">SIGNUP</a></li>
         </ul>
       </div>
     </div>
@@ -46,17 +46,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title text-center">Login</h2>
+          <h3 class="modal-title text-left">Login</h3>
         </div>
         <div class="modal-body">
           <form action="login.php">
             <div class="form-group">
-                <label for="emailBoxLogin">Email address</label>
-                <input type="email" class="form-control" id="emailBoxLogin" placeholder="Enter email" required>
+              <input type="email" class="form-control" id="emailBoxLogin" placeholder="email" required>
             </div>
             <div class="form-group">
-              <label for="passwordLogin">Password</label>
-              <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password" required>
+              <input type="password" class="form-control" id="passwordLogin" placeholder="password" required>
             </div>
           </form>
         </div>
@@ -69,29 +67,36 @@
   </div>
 
   <!-- This is the modal for the signup -->
-  <div class="modal fade" id="loginModal" tabindex="-1da" role="dialog">
+  <div class="modal fade" id="signupModal" tabindex="-1da" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title text-center">Login</h2>
+          <h3 class="modal-title text-left">Signup</h3>
         </div>
-        <div class="modal-body">
-          <form action="action_page.php">
-            <div class="form-group">
-                <label for="emailBoxLogin">Email address</label>
-                <input type="email" class="form-control" id="emailBoxLogin" placeholder="Enter email" required>
-            </div>
-            <div class="form-group">
-              <label for="passwordLogin">Password</label>
-              <input type="password" class="form-control" id="passwordLogin" placeholder="Enter password" required>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Login</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+        <form action="signup.php">
+          <div class="modal-body">
+              <div class="form-group">
+                <input type="text" class="form-control" id="userNameSignup" placeholder="Enter username" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="emailBoxSignup" placeholder="Enter email" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="passwordVerification" placeholder="Re-enter password" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" required>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
