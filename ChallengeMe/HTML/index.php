@@ -7,6 +7,7 @@
   <link href="../Stylesheets/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -73,29 +74,30 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h3 class="modal-title text-left">Signup</h3>
         </div>
-        <form action="signup.php">
-          <div class="modal-body">
-              <div class="form-group">
-                <input type="text" class="form-control" id="userNameSignup" placeholder="Enter username" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="emailBoxSignup" placeholder="Enter email" required>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="passwordVerification" placeholder="Re-enter password" required>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" required>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" value="Signup">Login</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </form>
+        <div class="modal-body">
+          <form action="./Scripts/php/signup.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" value="" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email" value="" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="passwordSignup" placeholder="Enter password" value="" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password" value="" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" value="" required>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary" value="Signup" id="signupButton">Signup</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="signupButtonClose">Close</button>
+            </div>
+          </form>
+        </div>
+        <script src="/Scripts/JS/verifySignup.js"></script>
       </div>
     </div>
   </div>
