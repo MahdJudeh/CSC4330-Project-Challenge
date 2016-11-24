@@ -14,7 +14,6 @@
   <div class="header">
     <h1>Challenge Me</h1>
   </div>
-
 <!-- This is the navigation bar -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -59,7 +58,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-primary" value="Login">Login</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -93,7 +92,7 @@
               </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary" value="Signup">Login</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </form>
