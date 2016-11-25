@@ -41,7 +41,7 @@ ob_end_flush();
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body onload="process()">
 
 <!-- This is the header -->
   <div class="header">

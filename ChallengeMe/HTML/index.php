@@ -45,6 +45,35 @@ if($_SESSION['login']){
       </div>
     </div>
   </nav>
+  <div class="mainBody">
+    <?php
+    require_once('./Scripts/php/includes/db_connect.php');
+    $queryC = "SELECT * FROM Challenge";
+    $resultC = mysqli_query($dbc, $queryc);
+    $count = 0;
+    while(($rowc = mysqli_fetch_array($resultc)) && ($count < 10)){
+      echo "<div class=\"challenge\">
+              <div class=\"container\">
+                <div class=\"row\">
+                  <div class=\"col-md-2\"> <h2>" .
+                    $row['Point Worth'] .
+                      "</h2>
+                  </div>
+                  <div class=\"col-md-10\">
+                    <h3>" .
+                      $row['Title'] .
+                    "</h3>
+                    <p>" .
+                    $row['Description'] .
+                    "</p>
+                  </div>
+                </div>
+              </div>
+            </div>";
+      $count++;
+    }
+     ?>
+  </div>
 
   <!-- This is the modal for the login -->
   <div class="modal fade" id="loginModal" tabindex="-1da" role="dialog">

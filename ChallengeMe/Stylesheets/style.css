@@ -37,3 +37,8 @@ html body{
 #headerLogin h3{
   color: #ffffff;
 }
+.mainBody .challenge {
+  background-color: #FFFFFF;
+  margin: 40px 30px;
+  color: #000000;
+}
