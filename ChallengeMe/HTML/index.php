@@ -1,4 +1,7 @@
-<!DOCTYPE HTML>
+
+<?php
+session_start();
+ ?>
 <html>
 <head>
   <title>ChallengeMe</title>
@@ -49,18 +52,18 @@
           <h3 class="modal-title text-left">Login</h3>
         </div>
         <div class="modal-body">
-          <form action="login.php">
+          <form action="./Scripts/php/login.php" method="post">
             <div class="form-group">
-              <input type="email" class="form-control" id="emailBoxLogin" placeholder="email" required>
+              <input type="test" class="form-control" name="userLogin" placeholder="username" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="passwordLogin" placeholder="password" required>
+              <input type="password" class="form-control" name="passwordLogin" placeholder="password" required>
+            </div>
+            <div>
+              <input type="submit" name="Login" id="loginButton">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" value="Login">Login</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -77,22 +80,22 @@
         <div class="modal-body">
           <form action="./Scripts/php/signup.php" method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" value="" required>
+              <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" value="" maxlength="15" required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email" value="" required>
+              <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email" value="" maxlenght ="30" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="passwordSignup" placeholder="Enter password" value="" required>
+              <input type="password" class="form-control" name="passwordSignup" placeholder="Enter password" value="" maxlenght ="20"  required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password" value="" required>
+              <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password" value="" maxlenght ="20" required>
             </div>
             <div class="form-group">
               <input type="password" class="form-control" name="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" value="" required>
             </div>
             <div>
-              <button type="button" class="btn btn-primary" value="Signup" id="signupButton">Signup</button>
+              <input type="submit" value="Signup" name="Signup" id="signupButton">
               <button type="button" class="btn btn-default" data-dismiss="modal" id="signupButtonClose">Close</button>
             </div>
           </form>
