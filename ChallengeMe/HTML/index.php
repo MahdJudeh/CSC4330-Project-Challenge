@@ -1,6 +1,9 @@
 
 <?php
 session_start();
+if($_SESSION['login']){
+
+}
  ?>
 <html>
 <head>
@@ -80,19 +83,19 @@ session_start();
         <div class="modal-body">
           <form action="./Scripts/php/signup.php" method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" value="" maxlength="15" required>
+              <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" maxlength="15" required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email" value="" maxlenght ="30" required>
+              <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email"  maxlenght ="30" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="passwordSignup" placeholder="Enter password" value="" maxlenght ="20"  required>
+              <input type="password" class="form-control" name="passwordSignup" placeholder="Enter password"  maxlenght ="20"  required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password" value="" maxlenght ="20" required>
+              <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password"  maxlenght ="20" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" value="" required>
+              <input type="text" class="form-control" name="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)"  required>
             </div>
             <div>
               <input type="submit" value="Signup" name="Signup" id="signupButton">
