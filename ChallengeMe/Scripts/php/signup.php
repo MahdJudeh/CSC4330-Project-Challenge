@@ -4,46 +4,61 @@ require_once('./includes/db_connect.php');
 
 
 if(isset($_POST['Signup'])){
-$username = $_POST['userNameSignup'];
-$email = $_POST['emailBoxSignup'];
-$password = $_POST['passwordSignup'];
-$passwordV = $_POST['passwordVerification'];
-$dob = $_POST['DOB'];
-}
+  $username = $_POST['userNameSignup'];
+  $email = $_POST['emailBoxSignup'];
+  $password = $_POST['passwordSignup'];
+  $passwordV = $_POST['passwordVerification'];
+  $dob = $_POST['DOB'];
+  $queryUser = "SELECT Username FROM User WHERE Username = '$username' LIMIT 1";
+  $queryEmail = "SELECT  Email FROM User WHERE Email = '$email' LIMIT 1";
+  $result1 =  mysqli_query($dbc, $queryUser);
+  $result2 = mysqli_query($dbc, $queryEmail);
 
+  $actualDOB = date("Y-m-d",strtotime($dob));
+  $currentdate = time();
+  $dob = strtotime(date("Y-m-d",strtotime($dob)));
 
-$queryUser = "SELECT Username FROM User WHERE Username = '$username' LIMIT 1";
-$queryEmail = "SELECT  Email FROM User WHERE Email = '$email' LIMIT 1";
-$result1 =  mysqli_query($dbc, $queryUser);
-$result2 = mysqli_query($dbc, $queryEmail);
+  $oldEnough = ($currentdate-$dob)/365.25/24/60/60;
 
+  $rowUser = mysqli_fetch_array($result1);
+  $rowEmail = mysqli_fetch_array($result2);
 
-$currentdate = time();
-$dob = strtotime(date("Y-m-d",strtotime($dob)));
-
-$oldEnough = ($currentdate-$dob)/365.25/24/60/60;
-
-$rowUser = mysqli_fetch_array($result1);
-$rowEmail = mysqli_fetch_array($result2);
-
-if($passwordV == $password){
-   if(($rowUser['Username'] != $username)){
-     if(($rowEmail['Email'] != $email)){
-       if($oldEnough>= 18){
-         $query = "INSERT INTO User (Email, Username, Password, DOB) VALUES (?, ?, ?, ?)";
-         $stmt = mysqli_prepare($dbc, $query);
-         mysqli_stmt_bind_param($stmt, "ssss", $email, $username, $password, $dob);
-         mysqli_stmt_execute($stmt);
-         mysqli_stmt_close($stmt);
-         echo "You have successfully logged in.";
-         header("Location: http://challengeme.life/index.php");
-         $_SESSION['login'] = true;
-         exit();
+  if($passwordV == $password){
+    $passMatch = true;
+     if(($rowUser['Username'] != $username)){
+       $uExist = false;
+       if(($rowEmail['Email'] != $email)){
+         $eExist = false;
+         if($oldEnough>= 18){
+           $NotOldEnough = false;
+           $dob = date("Y-m-d",strtotime($dob));
+           $query = "INSERT INTO User (Email, Username, Password, DOB) VALUES (?, ?, ?, ?)";
+           $stmt = mysqli_prepare($dbc, $query);
+           mysqli_stmt_bind_param($stmt, "ssss", $email, $username, $password, $actualDOB);
+           mysqli_stmt_execute($stmt);
+           mysqli_stmt_close($stmt);
+           echo "You have successfully signed up.";
+           header("Location: http://challengeme.life/index.php");
+           exit();
+         }
+         else{
+           if($oldEnough != 0){
+            $NotOldEnough = true;
+          }
+        }
+       }
+       else{
+         $eExist = true;
        }
      }
-   }
+     else{
+       $uExist = true;
+     }
+  }
+  else{
+    $passMatch = false;
+  }
 }
-
 ob_end_flush();
 ?>
 <html>
@@ -74,7 +89,7 @@ ob_end_flush();
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="../../index.php">HOT</a></li>
+          <li class="active"><a href="../../index.php">HOT</a></li>
           <li><a href="#">TOP</a></li>
           <li><a href="#">NEW</a></li>
           <li><a href="#">SUBMIT</a></li>
@@ -97,20 +112,21 @@ ob_end_flush();
               <input type="text" class="form-control" name="userNameSignup" placeholder="Enter username" value="" maxlength="15" required>
             </div>
             <?php
-           if($rowUser['Username'] == $username){
-              echo "<p style=\"color: #ffffff;\" class=\"text-center\">
-               FAILED TO CREATE ACCOUNT: USERNAME ALREADY EXISTS
-              </p>";
+            if($uExist == true){
+                echo "<p style=\"color: #ffffff;\" class=\"text-center\">
+                 FAILED TO CREATE ACCOUNT: USERNAME ALREADY EXISTS
+                </p>";
             }
             ?>
             <div class="form-group">
               <input type="email" class="form-control" name="emailBoxSignup" placeholder="Enter email" value="" maxlenght ="30" required>
             </div>
             <?php
-            if($rowEmail['Email'] == $email){
-              echo "<p style=\"color: #ffffff;\" class=\"text-center\">
-                FAILED TO CREATE ACCOUNT: EMAIL ALREADY IN SYSTEM
-              </p>";
+            if($eExist == true){
+
+                echo "<p style=\"color: #ffffff;\" class=\"text-center\">
+                  FAILED TO CREATE ACCOUNT: EMAIL ALREADY IN SYSTEM
+                </p>";
             }
             ?>
             <div class="form-group">
@@ -119,16 +135,27 @@ ob_end_flush();
             <div class="form-group">
               <input type="password" class="form-control" name="passwordVerification" placeholder="Re-enter password" value="" maxlenght ="20" required>
             </div>
+            <?php
+              if($passMatch = false){
+                echo "<p style=\"color: #ffffff;\" class=\"text-center\">
+                  FAILED TO CREATE ACCOUNT: PASSWORDS DON'T MATCH
+                </p>";
+              }?>
             <div class="form-group">
               <input type="text" class="form-control" name="DOB" placeholder="Enter Date of Birth (ex. MM/DD/YYYY)" value="" required>
             </div>
+            <?php
+            if($NotOldEnough == true){
+                echo "<p style=\"color: #ffffff;\" class=\"text-center\">
+                  FAILED TO CREATE ACCOUNT: NOT OLD ENOUGH
+                </p>";
+              }?>
             <div>
               <input type="submit" value="Signup" name="Signup" id="signupButton">
               <button type="button" class="btn btn-default" data-dismiss="modal" id="signupButtonClose">Close</button>
             </div>
           </form>
         </div>
-        <script src="/Scripts/JS/verifySignup.js"></script>
       </div>
 
 

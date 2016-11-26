@@ -28,7 +28,7 @@ html body{
   color: #2b2b2b;
   font-weight: bold;
 }
-#signupButton, #loginButton{
+#signupButton, #loginButton, #ChallengeButton{
   width: 80px;
   height: 34px;
   border-radius: 4px;
@@ -37,8 +37,10 @@ html body{
 #headerLogin h3{
   color: #ffffff;
 }
-.mainBody .challenge {
+.mainBody .challenge .container .row {
   background-color: #FFFFFF;
-  margin: 40px 30px;
+  margin: 15px 30px 20px 30px;
   color: #000000;
+  padding: 10px 0px;
+  margin-bottom: 0px;
 }

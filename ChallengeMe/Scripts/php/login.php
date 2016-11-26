@@ -17,19 +17,21 @@ if(isset($_POST['Login'])){
   else{
     $password = $_POST['passwordLogin'];
   }
+  $query = "SELECT Username, Password, UserID FROM User WHERE Username = '$username' AND Password = '$password' LIMIT 1";
+  $result =  mysqli_query($dbc, $query);
+
+  $row = mysqli_fetch_array($result);
+  if(($row['Username'] == $username) && ($row['Password'] == $password)){
+    echo "You have successfully logged in.";
+    $_SESSION['login'] = 'true';
+    $_SESSION['user'] = $row['UserID'];
+    header("Location: http://challengeme.life/index.php");
+    exit();
+  }
+
 }
 
-$query = "SELECT Username, Password FROM User WHERE Username = '$username' AND Password = '$password' LIMIT 1";
-$result =  mysqli_query($dbc, $query);
-
-$row = mysqli_fetch_array($result);
-if(($row['Username'] == $username) && ($row['Password'] == $password)){
-  echo "You have successfully logged in.";
-  header("Location: http://challengeme.life/index.php");
-  $_SESSION['login'] = true;
-  exit();
-}
-ob_end_flush();
+ob_end_clean();
 ?>
 <html>
 <head>
@@ -83,9 +85,14 @@ ob_end_flush();
             </div>
             <div class="form-group">
               <input type="password" class="form-control" name="passwordLogin" placeholder="password" required maxlenght ="20" size="25"><br />
-              <p style="color: #ffffff;" class="text-center">
-                FAILED TO LOGIN: Username or Password incorrect
-              </p>
+              <?php
+                if($username!= null && $password != null){
+
+                    echo "<p style=\"color: #ffffff;\" class=\"text-center\">
+                      FAILED TO LOGIN: EMAIL OR PASSWORD WRONG
+                    </p>";
+                }
+                ?>
             </div>
             <div class="text-center">
               <input type="submit" name="Login" id="loginButton">

@@ -1,10 +1,13 @@
-
 <?php
-session_start();
-if($_SESSION['login']){
+    session_start();
+    require_once('./Scripts/php/includes/db_connect.php');
+    $queryU = "SELECT Username FROM User WHERE UserID =". $_SESSION['user'];
+    $resultU = mysqli_query($dbc, $queryU);
+    $row = mysqli_fetch_array($resultU);
+    $user = $row['Username'];
 
-}
  ?>
+
 <html>
 <head>
   <title>ChallengeMe</title>
@@ -36,36 +39,78 @@ if($_SESSION['login']){
           <li class="active"><a href="#">HOT</a></li>
           <li><a href="#">TOP</a></li>
           <li><a href="#">NEW</a></li>
-          <li><a href="#">SUBMIT</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#ChallengeModal">SUBMIT</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="login text-right" href="#0" data-toggle="modal" data-target="#loginModal">LOGIN</a></li>
-		      <li><a class="signup text-right" href="#0" data-toggle="modal" data-target="#signupModal">SIGNUP</a></li>
-        </ul>
+        <?php
+          if(!($_SESSION['login']== 'true') || ($_SESSION['login'] == null)){
+          echo "<ul class=\"nav navbar-nav navbar-right\">
+            <li><a class=\"login text-right\" href=\"#0\" data-toggle=\"modal\" data-target=\"#loginModal\">LOGIN</a></li>
+  		      <li><a class=\"signup text-right\" href=\"#0\" data-toggle=\"modal\" data-target=\"#signupModal\">SIGNUP</a></li>
+          </ul>";
+          }
+          else{
+            echo "<ul class=\"nav navbar-nav navbar-right\">
+              <li><a class=\"text-right\" href=\"#0\">Hi ".$user ."</a></li>
+    		      <li><a class=\"logout text-right\" href=\"./Scripts/php/logout.php\">LOGOUT</a></li>
+            </ul>";
+          }
+        ?>
       </div>
     </div>
   </nav>
   <div class="mainBody">
     <?php
-    require_once('./Scripts/php/includes/db_connect.php');
     $queryC = "SELECT * FROM Challenge";
-    $resultC = mysqli_query($dbc, $queryc);
+    $resultC = mysqli_query($dbc, $queryC);
     $count = 0;
-    while(($rowc = mysqli_fetch_array($resultc)) && ($count < 10)){
+    while(($rowC = mysqli_fetch_array($resultC)) && ($count < 10)){
       echo "<div class=\"challenge\">
               <div class=\"container\">
-                <div class=\"row\">
-                  <div class=\"col-md-2\"> <h2>" .
-                    $row['Point Worth'] .
-                      "</h2>
+                <div class=\"row text-center\">
+                  <div class=\"col-md-1 column\">
+                  <button type=\"button\" class=\"btn btn-default btn-sm\">
+                  <span class=\"glyphicon glyphicon-chevron-up text-center\"></span></button>
+                    <h2 text-center>" .
+                      $rowC['Point Worth'] .
+                    "</h2>
+                    <button type=\"button\" class=\"btn btn-default btn-sm\">
+                    <span class=\"glyphicon glyphicon-chevron-down text-center\"></span></button>
+
                   </div>
-                  <div class=\"col-md-10\">
-                    <h3>" .
-                      $row['Title'] .
-                    "</h3>
-                    <p>" .
-                    $row['Description'] .
-                    "</p>
+                  <div class=\"col-md-10 column\">
+                    <h1>" .
+                      $rowC['Title'] .
+                    "</h1>
+                    <h4>" .
+                    $rowC['Description'] .
+                    "</h4>
+                  </div>
+                  <div class=\"col-md-1 column\" style=\"padding: 0px\">
+                    <button type=\"button\" class=\"btn btn-default btn-md\" style=\"padding: 0px; width: 98%; height: 20%\" data-toggle=\"modal\" data-target=\"#challengeModal".$rowC['ChallengeID']. "\"><span>ACCEPT</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=\"modal fade\" id=\"challengeModal".$rowC['ChallengeID']. "\" tabindex=\"-1da\" role=\"dialog\">
+              <div class=\"modal-dialog\" role=\"document\">
+                <div class=\"modal-content\">
+                  <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                    <h3 class=\"modal-title text-left\">Login</h3>
+                  </div>
+                  <div class=\"modal-body\">
+                    <form action=\"./Scripts/php/submitVideo.php\" method=\"post\">
+                      <div class=\"form-group\">
+                        <input type=\"text\" class=\"form-control\" name=\"videoLink\" placeholder=\"Youtube Link\" required>
+                      </div>
+                      <div class=\"form-group\">
+                        <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
+                      </div>
+                      <div>
+                        <input type=\"submit\" name=\"Submit\" id=\"videoButton\">
+                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -86,7 +131,7 @@ if($_SESSION['login']){
         <div class="modal-body">
           <form action="./Scripts/php/login.php" method="post">
             <div class="form-group">
-              <input type="test" class="form-control" name="userLogin" placeholder="username" required>
+              <input type="text" class="form-control" name="userLogin" placeholder="username" required>
             </div>
             <div class="form-group">
               <input type="password" class="form-control" name="passwordLogin" placeholder="password" required>
@@ -132,7 +177,32 @@ if($_SESSION['login']){
             </div>
           </form>
         </div>
-        <script src="/Scripts/JS/verifySignup.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the modal for the submitting Challenges -->
+  <div class="modal fade" id="ChallengeModal" tabindex="-1da" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title text-left">SUBMIT CHALLENGE</h3>
+        </div>
+        <div class="modal-body">
+          <form action="./Scripts/php/submitChallenge.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="TitleChallenge" placeholder="Title" maxlength="100" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="DescriptionChallenge" placeholder="Description"  maxlength="500" required></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Challenge" name="Challenge" id="ChallengeButton">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="ChallengeButtonClose">Close</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
