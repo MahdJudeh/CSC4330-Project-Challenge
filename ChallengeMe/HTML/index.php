@@ -4,10 +4,11 @@
     $queryU = "SELECT Username FROM User WHERE UserID =". $_SESSION['user'];
     $resultU = mysqli_query($dbc, $queryU);
     $row = mysqli_fetch_array($resultU);
+    $userID = $_SESSION['user'];
     $user = $row['Username'];
 
  ?>
-
+<!DOCTYPE html>
 <html>
 <head>
   <title>ChallengeMe</title>
@@ -106,8 +107,11 @@
                       <div class=\"form-group\">
                         <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
                       </div>
+                      <div class=\"form-group\">
+                        <input type=\"hidden\" class=\"form-control\" name=\"UserID\" value=\"". $user ."\" required>
+                      </div>
                       <div>
-                        <input type=\"submit\" name=\"Submit\" id=\"videoButton\">
+                        <input type=\"submit\" name=\"Video\" id=\"videoButton\">
                         <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
                       </div>
                     </form>
@@ -206,6 +210,10 @@
       </div>
     </div>
   </div>
+  <div class="bottom">
+    <script src="./Scripts/JS/autoscroll.js"></script>
+    <div class="loader"></div>
+  </div>
 
 </body>
-<html>
+</html>
