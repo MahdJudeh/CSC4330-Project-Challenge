@@ -59,3 +59,12 @@ html body{
 .bottom{
   position: fixed;
 }
+.carousel-inner > .item > iframe,
+  .carousel-inner > .item > a > iframe {
+      width: 70%;
+      margin: auto;
+  }
+
+.slick-prev:before, .slick-next:before {
+    color:red !important;
+}

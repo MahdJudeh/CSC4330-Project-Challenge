@@ -1,0 +1,58 @@
+<div id=\"Challenge".$rowC['ChallengeID']. "\" class=\"collapse\">";
+$queryV = "SELECT * FROM Video WHERE ChallengeID =". $rowC['ChallengeID'];
+$resultV = mysqli_query($dbc, $queryV);
+$countV = mysql_num_rows($resultV);
+echo "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"carousel slide\" data-ride=\"carousel\">
+        <ol class=\"carousel-indicators\">
+          ";
+          for($i = 0; $i< $countV; $i++){
+            if($i = 0){
+              echo "<li data-target=\"#myCarousel" .$rowC['ChallengeID'] ."\" data-slide-to=\"". $i . "\" class=\"active\">
+
+              </li>";
+            }
+            else{
+              echo "<li data-target=\"#myCarousel" .$rowC['ChallengeID'] ."\" data-slide-to=\"". $i . "\">
+
+              </li>";
+            }
+          }
+          echo "
+        </ol>
+
+        <div class=\"carousel-inner\" role=\"listbox\">";
+        $i = 0;
+        while($rowV = mysqli_fetch_array($resultV)){
+          if($i = 0){
+
+         echo "<div class=\"item active\">
+                <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+               </div>";
+        }
+        else{
+          echo "<div class=\"item\">
+            <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+           </div>";
+        }
+
+      }
+  echo "</div>
+        <!-- Left and right controls -->
+        <a class=\"left carousel-control\" href=\"#myCarousel" .$rowC['ChallengeID'] ."\" role=\"button\" data-slide=\"prev\">
+          <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Previous</span>
+        </a>
+        <a class=\"right carousel-control\" href=\"#myCarousel" .$rowC['ChallengeID'] ."\" role=\"button\" data-slide=\"next\">
+          <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Next</span>
+        </a>
+      </div>
+
+</div>
+</div>
+<div class=\"col-md-1 column\" style=\"padding: 0px\">
+<button type=\"button\" class=\"btn btn-default btn-md\" style=\"padding: 0px; width: 98%; height: 20%\" data-toggle=\"modal\" data-target=\"#challengeModal".$rowC['ChallengeID']. "\"><span>ACCEPT</span></button>
+</div>
+</div>
+
+</div>

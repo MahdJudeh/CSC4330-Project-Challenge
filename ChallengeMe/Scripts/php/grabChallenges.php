@@ -27,6 +27,38 @@
                   <h4>" .
                   $rowC['Description'] .
                   "</h4>
+                  <button data-toggle=\"collapse\" data-target=\"#ChallengeVideo".$rowC['ChallengeID']. "\">Videos</button>
+                  <div class=\"collapse\" id=\"ChallengeVideo".$rowC['ChallengeID']. "\">";
+                    $queryV = "SELECT * FROM Video WHERE ChallengeID =". $rowC['ChallengeID'];
+                    $resultV = mysqli_query($dbc, $queryV);
+                    $countV = mysqli_num_rows($resultV);
+                    $active = "active";
+
+                    $html .= "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"newCarousel\">";
+                            $i = 0;
+                            while($rowV = mysqli_fetch_array($resultV)){
+                              if($i = 0){
+
+                             $html .= "<div>
+                                    <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+                                   </div>";
+                            }
+                            else{
+                              $html .= "<div>
+                                <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+                               </div>";
+                            }
+                            if($countV == 0){
+                                  $html .= "<div>
+                                     <p>
+                                     THIS IS EMPTY;
+                                     </p>
+                                    </div>";
+                            }
+
+                          }
+                      $html .= "</div>
+                      </div>
                 </div>
                 <div class=\"col-md-1 column\" style=\"padding: 0px\">
                   <button type=\"button\" class=\"btn btn-default btn-md\" style=\"padding: 0px; width: 98%; height: 20%\" data-toggle=\"modal\" data-target=\"#challengeModal".$rowC['ChallengeID']. "\"><span>ACCEPT</span></button>
@@ -50,7 +82,7 @@
                       <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
                     </div>
                     <div>
-                      <input type=\"submit\" name=\"Submit\" id=\"videoButton\">
+                      <input type=\"submit\" name=\"Video\" id=\"videoButton\">
                       <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
                     </div>
                   </form>

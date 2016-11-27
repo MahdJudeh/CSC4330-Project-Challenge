@@ -11,13 +11,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8"/>
   <title>ChallengeMe</title>
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css"/>
   <link href="../Stylesheets/style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script src="./Scripts/JS/setactive.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
 
@@ -64,8 +69,9 @@
     $queryC = "SELECT * FROM Challenge";
     $resultC = mysqli_query($dbc, $queryC);
     $count = 0;
+    $html = "";
     while(($rowC = mysqli_fetch_array($resultC)) && ($count < 10)){
-      echo "<div class=\"challenge\">
+      $html.= "<div class=\"challenge\">
               <div class=\"container\">
                 <div class=\"row text-center\">
                   <div class=\"col-md-1 column\">
@@ -85,13 +91,48 @@
                     <h4>" .
                     $rowC['Description'] .
                     "</h4>
-                  </div>
+                    <button data-toggle=\"collapse\" data-target=\"#ChallengeVideo".$rowC['ChallengeID']. "\">Videos</button>
+                    <div class=\"collapse\" id=\"ChallengeVideo".$rowC['ChallengeID']. "\">";
+                      $queryV = "SELECT * FROM Video WHERE ChallengeID =". $rowC['ChallengeID'];
+                      $resultV = mysqli_query($dbc, $queryV);
+                      $countV = mysqli_num_rows($resultV);
+                      $active = "active";
+
+                      $html.=  "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"newCarousel\">";
+                              $i = 0;
+                              while($rowV = mysqli_fetch_array($resultV)){
+                                if($i = 0){
+
+                               $html.=  "<div>
+                                      <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+                                     </div>";
+                              }
+                              else{
+                                $html.=  "<div>
+                                  <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+                                 </div>";
+                              }
+                              if($countV == 0){
+                                    "<div>
+                                       <p>
+                                       THIS IS EMPTY;
+                                       </p>
+                                      </div>";
+                              }
+
+                            }
+                        $html.=  "</div>
+                        </div>
+                      </div>
                   <div class=\"col-md-1 column\" style=\"padding: 0px\">
                     <button type=\"button\" class=\"btn btn-default btn-md\" style=\"padding: 0px; width: 98%; height: 20%\" data-toggle=\"modal\" data-target=\"#challengeModal".$rowC['ChallengeID']. "\"><span>ACCEPT</span></button>
                   </div>
                 </div>
+
               </div>
+
             </div>
+
             <div class=\"modal fade\" id=\"challengeModal".$rowC['ChallengeID']. "\" tabindex=\"-1da\" role=\"dialog\">
               <div class=\"modal-dialog\" role=\"document\">
                 <div class=\"modal-content\">
@@ -121,6 +162,7 @@
             </div>";
       $count++;
     }
+    echo $html;
      ?>
   </div>
 
@@ -214,6 +256,5 @@
     <script src="./Scripts/JS/autoscroll.js"></script>
     <div class="loader"></div>
   </div>
-
 </body>
 </html>
