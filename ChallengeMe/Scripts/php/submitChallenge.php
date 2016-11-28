@@ -14,8 +14,8 @@ if($_SESSION['login'] == 'true'){
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
   echo "You have successfully submitted a challenge.";
-  // header("Location: http://challengeme.life/index.php");
-  // exit();
+  header("Location: http://challengeme.life/index.php");
+  exit();
 
 }
 else{
