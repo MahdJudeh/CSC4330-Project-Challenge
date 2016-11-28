@@ -3,7 +3,13 @@
   $load = strip_tags($_POST['load'])*10;
   echo $load;
 
-  $queryC = "SELECT * FROM Challenge LIMIT ".$load.", 10";
+  $queryU = "SELECT Username FROM User WHERE UserID =". $_SESSION['user'];
+  $resultU = mysqli_query($dbc, $queryU);
+  $row = mysqli_fetch_array($resultU);
+  $userID = $_SESSION['user'];
+  $user = $row['Username'];
+
+  $queryC = "SELECT * FROM Challenge ORDER BY SubmissionTime ASC LIMIT ".$load.", 10";
   $resultC = mysqli_query($dbc, $queryC);
   $html = '';
   while(($rowC = mysqli_fetch_array($resultC))){
@@ -11,13 +17,19 @@
             <div class=\"container\">
               <div class=\"row text-center\">
                 <div class=\"col-md-1 column\">
-                <button type=\"button\" class=\"btn btn-default btn-sm\">
+                <form method=\"post\" action=\"./Scripts/php/upvoteC.php\">
+                <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
+                <button type=\"submit\"name=\"upvoteChallenge\" class=\"btn btn-default btn-sm\">
                 <span class=\"glyphicon glyphicon-chevron-up text-center\"></span></button>
-                  <h2 text-center>" .
+                </form>
+                  <h2 class=\"text-center\">" .
                     $rowC['Points'] .
                   "</h2>
-                  <button type=\"button\" class=\"btn btn-default btn-sm\">
+                  <form method=\"post\" action=\"./Scripts/php/downvoteC.php\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
+                  <button type=\"submit\" name=\"downvoteChallenge\" class=\"btn btn-default btn-sm\" from>
                   <span class=\"glyphicon glyphicon-chevron-down text-center\"></span></button>
+                  </form>
 
                 </div>
                 <div class=\"col-md-10 column\">
@@ -37,24 +49,26 @@
                     $html .= "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"newCarousel\">";
                             $i = 0;
                             while($rowV = mysqli_fetch_array($resultV)){
-                              if($i = 0){
-
-                             $html .= "<div>
-                                    <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
-                                   </div>";
-                            }
-                            else{
-                              $html .= "<div>
+$vID = $rowV['VideoID'];
+                              $html.=  "<div>
                                 <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
+                                  <div>
+                                  <form method=\"post\" action=\"./Scripts/php/upvoteV.php\">
+                                  <input type=\"hidden\" class=\"form-control\" name=\"VideoID\" value=\"". $vID ."\" required>
+                                  <button type=\"submit\" name=\"upvoteVote\" class=\"btn btn-default btn-sm\">
+                                  <span class=\"glyphicon glyphicon-chevron-up text-center\"></span></button>
+                                  </form>
+                                    <h2 class=\"text-center\">";
+                                      $points = (int)$rowV['Upvotes'] - (int)$rowV['Downvotes'];
+                                      $html .= $points . " By:" . $user .
+                                    "</h2>
+                                    <form method=\"post\" action=\"./Scripts/php/downvoteV.php\">
+                                    <input type=\"hidden\" class=\"form-control\" name=\"VideoID\" value=\"". $vID ."\" required>
+                                    <button type=\"submit\" name=\"downvoteVote\" class=\"btn btn-default btn-sm\">
+                                    <span class=\"glyphicon glyphicon-chevron-down text-center\"></span></button>
+                                    </form>
+                                  </div>
                                </div>";
-                            }
-                            if($countV == 0){
-                                  $html .= "<div>
-                                     <p>
-                                     THIS IS EMPTY;
-                                     </p>
-                                    </div>";
-                            }
 
                           }
                       $html .= "</div>

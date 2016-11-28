@@ -25,7 +25,7 @@ if(isset($_POST['Login'])){
     echo "You have successfully logged in.";
     $_SESSION['login'] = 'true';
     $_SESSION['user'] = $row['UserID'];
-    header("Location: http://challengeme.life/index.php");
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit();
   }
 

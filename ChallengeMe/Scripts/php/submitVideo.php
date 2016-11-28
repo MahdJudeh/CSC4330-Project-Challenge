@@ -18,7 +18,7 @@ if($_SESSION['login'] == 'true'){
     echo "You have successfully submitted a challenge.";
     echo $youtubeUrl;
   }
-  header("Location: http://challengeme.life/index.php");
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
   exit();
 }
 else{

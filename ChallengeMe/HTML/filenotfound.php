@@ -27,9 +27,8 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="http://challengeme.life">HOT</a></li>
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">NEW</a></li>
-            <li><a href="#">SUBMIT</a></li>
+            <li><a href="top.php">TOP</a></li>
+            <li><a href="new.php">NEW</a></li
           </ul>
         </div>
       </div>

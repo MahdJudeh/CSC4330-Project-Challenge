@@ -42,9 +42,9 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">HOT</a></li>
+          <li><a href="index.php">HOT</a></li>
           <li><a href="top.php">TOP</a></li>
-          <li><a href="new.php">NEW</a></li>
+          <liclass="active"><a href="#">NEW</a></li>
           <li><a href="#" data-toggle="modal" data-target="#ChallengeModal">CHALLENGE THEM</a></li>
         </ul>
         <?php
@@ -66,7 +66,7 @@
   </nav>
   <div class="mainBody">
     <?php
-    $queryC = "SELECT * FROM Challenge ORDER BY Points / SubmissionTime DESC";
+    $queryC = "SELECT * FROM Challenge ORDER BY SubmissionTime ASC";
     $resultC = mysqli_query($dbc, $queryC);
     $count = 0;
     $html = "";
@@ -86,7 +86,7 @@
                     "</h2>
                     <form method=\"post\" action=\"./Scripts/php/downvoteC.php\">
                     <input type=\"hidden\" class=\"form-control\" name=\"ChallengeID\" value=\"". $rowC['ChallengeID'] ."\" required>
-                    <button type=\"submit\" name=\"downvoteChallenge\" class=\"btn btn-default btn-sm\" from>
+                    <button type=\"submit\" name=\"downvoteChallenge\" class=\"btn btn-default btn-sm\">
                     <span class=\"glyphicon glyphicon-chevron-down text-center\"></span></button>
                     </form>
 
@@ -108,7 +108,7 @@
                       $html.=  "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"newCarousel\">";
                               $i = 0;
                               while($rowV = mysqli_fetch_array($resultV)){
-                                $vID = $rowV['VideoID'];
+$vID = $rowV['VideoID'];
                                 $html.=  "<div>
                                   <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
                                     <div>
@@ -263,7 +263,7 @@
     </div>
   </div>
   <div class="bottom">
-    <script src="./Scripts/JS/autoscrollH.js"></script>
+    <script src="./Scripts/JS/autoscrollN.js"></script>
     <div class="loader"></div>
   </div>
 </body>

@@ -42,8 +42,8 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">HOT</a></li>
-          <li><a href="top.php">TOP</a></li>
+          <li><a href="index.php">HOT</a></li>
+          <li class="active"><a href="#">TOP</a></li>
           <li><a href="new.php">NEW</a></li>
           <li><a href="#" data-toggle="modal" data-target="#ChallengeModal">CHALLENGE THEM</a></li>
         </ul>
@@ -66,7 +66,7 @@
   </nav>
   <div class="mainBody">
     <?php
-    $queryC = "SELECT * FROM Challenge ORDER BY Points / SubmissionTime DESC";
+    $queryC = "SELECT * FROM Challenge ORDER BY Points DESC";
     $resultC = mysqli_query($dbc, $queryC);
     $count = 0;
     $html = "";
@@ -108,7 +108,7 @@
                       $html.=  "<div id=\"myCarousel" .$rowC['ChallengeID'] ."\" class=\"newCarousel\">";
                               $i = 0;
                               while($rowV = mysqli_fetch_array($resultV)){
-                                $vID = $rowV['VideoID'];
+$vID = $rowV['VideoID'];
                                 $html.=  "<div>
                                   <iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/". $rowV['VideoLink'] ."\" frameborder=\"0\" allowfullscreen></iframe>
                                     <div>
@@ -263,7 +263,7 @@
     </div>
   </div>
   <div class="bottom">
-    <script src="./Scripts/JS/autoscrollH.js"></script>
+    <script src="./Scripts/JS/autoscrollT.js"></script>
     <div class="loader"></div>
   </div>
 </body>

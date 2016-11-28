@@ -5,7 +5,7 @@ $(document).ready(function(){
       if($(window).scrollTop() >= $(document).height() - $(window).height()){
         $('.loader').show();
         load++;
-        $.post("/Scripts/php/grabChallenges.php", {load:load}, function(data){
+        $.post("/Scripts/php/grabChallengesT.php", {load:load}, function(data){
           $('.mainBody').append(data);
         });
         $('.loader').hide();

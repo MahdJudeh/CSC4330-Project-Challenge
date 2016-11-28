@@ -38,7 +38,7 @@ if(isset($_POST['Signup'])){
            mysqli_stmt_execute($stmt);
            mysqli_stmt_close($stmt);
            echo "You have successfully signed up.";
-           header("Location: http://challengeme.life/index.php");
+           header('Location: ' . $_SERVER['HTTP_REFERER']);
            exit();
          }
          else{
