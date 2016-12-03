@@ -111,7 +111,7 @@ Blake Roussel - Database creation and design
 
 
 
-**Gantt Chart:**
+**Gantt Chart:**<br>
 <img src="../images/gnattChart.png">
 
 **ChallengeMe! Ideas**
